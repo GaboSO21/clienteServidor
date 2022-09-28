@@ -1,2 +1,2 @@
-##Cliente/servidor
+# Cliente/servidor
 Repositorio para guardar cositas :)
