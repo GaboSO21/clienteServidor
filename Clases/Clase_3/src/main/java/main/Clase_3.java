@@ -3,16 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package com.clase_2;
+package main;
 
 /**
  *
  * @author GabrielPC
  */
-public class Clase_2 {
+public class Clase_3 {
 
     public static void main(String[] args) {
+        
+        
 
-      
     }
 }
