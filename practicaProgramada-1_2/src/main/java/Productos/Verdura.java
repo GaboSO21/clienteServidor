@@ -25,9 +25,8 @@ public final class Verdura extends Productos {
     }
 
     @Override
-    public int calcularPrecio(int kilos) {
-        
-        return 0;
+    public int calcularPrecio(int gramos) {
+        return (precio / 1000) * gramos;
     }
 
     @Override

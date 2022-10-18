@@ -26,8 +26,7 @@ public final class Abarrote extends Productos {
 
     @Override
     public int calcularPrecio(int unidad) {
-
-        return 0;
+        return unidad * precio;
     }
 
     @Override
