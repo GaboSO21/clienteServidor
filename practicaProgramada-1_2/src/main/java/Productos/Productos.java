@@ -5,6 +5,7 @@ public abstract class Productos {
     protected String nombre;
     protected String tipo;
     protected String marca;
+    protected int precio;
 
     public Productos() {
     }
@@ -29,6 +30,22 @@ public abstract class Productos {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     public abstract int calcularPrecio(int unidad);

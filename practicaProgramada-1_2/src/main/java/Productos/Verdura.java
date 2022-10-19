@@ -2,8 +2,6 @@ package Productos;
 
 public final class Verdura extends Productos {
 
-    private int precio;
-
     public Verdura() {
     }
 
@@ -16,29 +14,9 @@ public final class Verdura extends Productos {
         this.precio = precio;
     }
 
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
     @Override
     public int calcularPrecio(int gramos) {
-        return (precio / 1000) * gramos;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Producto{");
-        sb.append("nombre=").append(nombre);
-        sb.append(", tipo=").append(tipo);
-        sb.append(", marca=").append(marca);
-        sb.append(", precio=").append(precio);
-        sb.append('}');
-        return sb.toString();
+        return (super.getPrecio() / 1000) * gramos;
     }
 
 }

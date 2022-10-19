@@ -2,8 +2,6 @@ package Productos;
 
 public final class Abarrote extends Productos {
 
-    private int precio;
-
     public Abarrote() {
     }
 
@@ -16,29 +14,9 @@ public final class Abarrote extends Productos {
         this.precio = precio;
     }
 
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
     @Override
     public int calcularPrecio(int unidad) {
         return unidad * precio;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Producto{");
-        sb.append("nombre=").append(nombre);
-        sb.append(", tipo=").append(tipo);
-        sb.append(", marca=").append(marca);
-        sb.append(", precio=").append(precio);
-        sb.append('}');
-        return sb.toString();
     }
 
 }
