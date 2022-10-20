@@ -9,22 +9,28 @@ public class Mercado {
     private static String[] marcas = new String[5];
 
     public void registro() {
-        int op = Integer
-                .parseInt(Dialogo.Capturar(
-                        "Registro sub-menu:\n[1].Registrar nuevos productos\n[2].Registrar una marca\n[3].Volver",
-                        "Sub-menu", 1));
+        try {
 
-        switch (op) {
-            case 1:
-                registrarProducto();
-                break;
-            case 2:
-                registrarMarca();
-                break;
-            case 3:
-                break;
-            default:
-                Dialogo.Mostrar("Opcion invalida.", "Error", 0);
+            int op = Integer
+                    .parseInt(Dialogo.Capturar(
+                            "Registro sub-menu:\n[1].Registrar nuevos productos\n[2].Registrar una marca\n[3].Volver",
+                            "Sub-menu", 1));
+
+            switch (op) {
+                case 1:
+                    registrarProducto();
+                    break;
+                case 2:
+                    registrarMarca();
+                    break;
+                case 3:
+                    break;
+                default:
+                    Dialogo.Mostrar("Opcion invalida.", "Error", 0);
+            }
+        } catch (NumberFormatException e) {
+            Dialogo.Mostrar("Opcion invalida.", "Error", 0);
+            registro();
         }
 
     }
