@@ -15,8 +15,9 @@ public final class Verdura extends Productos {
     }
 
     @Override
-    public int calcularPrecio(int gramos) {
-        return (super.getPrecio() / 1000) * gramos;
+    public double calcularPrecio(Double gramos) {
+        return (precio / 1000) * gramos;
     }
 
 }
+ 

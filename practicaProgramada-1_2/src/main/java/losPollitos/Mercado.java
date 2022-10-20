@@ -36,13 +36,14 @@ public class Mercado {
                 String tipo = "Verdura", marca = seleccionarMarca(), info = "Seleccione un producto:\n",
                         factura = "Productos seleccionados:\n";
                 int cont = 0;
+                double precioFinal = 0;
                 for (int i = 0; i < 15; i++) {
                     Productos[] compras = new Productos[15];
                     for (int j = 0; j < productos.length; j++) {
                         if (productos[j] != null && productos[j].getTipo() == tipo
                                 && productos[j].getMarca() == marca) {
-                            info += productos[j].getMarca() + ":\n[" + (cont + 1) + "]."
-                                    + productos[j].getNombre() + " - marca: " + productos[j].getMarca() + "- tipo"
+                            info += "[" + (cont + 1) + "]."
+                                    + productos[j].getNombre() + " - marca: " + productos[j].getMarca() + "- tipo: "
                                     + productos[j].getTipo() + " - precioXkg: " + productos[j].getPrecio() + "\n";
                             compras[cont] = productos[j];
                             cont++;
@@ -54,77 +55,70 @@ public class Mercado {
                         break;
                     } else {
                         if (compras[op - 1] != null) {
-                            int gramos = Integer.parseInt(Dialogo.Capturar("Cuantos gramos desea: ", "Seleccion", 3));
-                            System.out.println(cont);
-                            factura += "[" + i + "]" + "Nombre: " + compras[op - 1].getNombre() + " - marca: "
-                                    + compras[op - 1].getMarca() + "- tipo"
+                            Verdura verdura = new Verdura();
+                            verdura = (Verdura) compras[op - 1];
+                            double gramos = Double
+                                    .parseDouble(Dialogo.Capturar("Cuantos gramos desea: ", "Seleccion", 3));
+                            double total = verdura.calcularPrecio(gramos);
+                            factura += "[" + (i + 1) + "]" + "Nombre: " + compras[op - 1].getNombre() + " - marca: "
+                                    + compras[op - 1].getMarca() + "- tipo: "
                                     + compras[op - 1].getTipo() + " - precioXkg: "
-                                    + compras[op - 1].getPrecio() + "- gramos:"
-                                    + op + "- precio final: " + compras[op - 1].calcularPrecio(gramos) + "\n";
-                            info = "";
+                                    + compras[op - 1].getPrecio() + "- gramos: "
+                                    + gramos + "- precio final: " + total + "\n";
+                            info = "Seleccione un producto:\n";
+                            cont = 0;
+                            precioFinal += verdura.calcularPrecio(gramos);
                         }
                     }
                 }
-                Dialogo.Mostrar(factura, "Factura", 1);
+                Dialogo.Mostrar(factura + "\n----------------\nPrecio final: " + precioFinal, "Factura", 1);
                 break;
             case 2:
-                seleccionProducto("Abarrote");
+                tipo = "Abarrote";
+                marca = seleccionarMarca();
+                info = "Seleccione un producto:\n";
+                factura = "Productos seleccionados:\n";
+                cont = 0;
+                precioFinal = 0;
+                for (int i = 0; i < 15; i++) {
+                    Productos[] compras = new Productos[15];
+                    for (int j = 0; j < productos.length; j++) {
+                        if (productos[j] != null && productos[j].getTipo() == tipo
+                                && productos[j].getMarca() == marca) {
+                            info += "[" + (cont + 1) + "]."
+                                    + productos[j].getNombre() + " - marca: " + productos[j].getMarca() + "- tipo: "
+                                    + productos[j].getTipo() + " - precioXunidad: " + productos[j].getPrecio() + "\n";
+                            compras[cont] = productos[j];
+                            cont++;
+                        }
+                    }
+                    System.out.println(cont);
+                    op = Integer.parseInt(Dialogo.Capturar(info + "\n[0].Finalizar compra", "Seleccion", 3));
+                    if (op == 0) {
+                        break;
+                    } else {
+                        if (compras[op - 1] != null) {
+                            Abarrote verdura = new Abarrote();
+                            verdura = (Abarrote) compras[op - 1];
+                            double gramos = Double
+                                    .parseDouble(Dialogo.Capturar("Cuantas unidades desea: ", "Seleccion", 3));
+                            double total = verdura.calcularPrecio(gramos);
+                            factura += "[" + (i + 1) + "]" + "Nombre: " + compras[op - 1].getNombre() + " - marca: "
+                                    + compras[op - 1].getMarca() + "- tipo: "
+                                    + compras[op - 1].getTipo() + " - precioXunidad: "
+                                    + compras[op - 1].getPrecio() + "- gramos: "
+                                    + gramos + "- precio final: " + total + "\n";
+                            info = "Seleccione un producto:\n";
+                            cont = 0;
+                            precioFinal += verdura.calcularPrecio(gramos);
+                        }
+                    }
+                }
+                Dialogo.Mostrar(factura + "\n----------------\nPrecio final: " + precioFinal, "Factura", 1);
                 break;
             default:
                 Dialogo.Mostrar("Opcion invalida.", "Error", 0);
         }
-    }
-
-    public String seleccionProducto(String tipo) {
-        int j = 0, op = 1;
-        String factura = "Productos seleccionados:\n", marca = seleccionarMarca();
-        Productos[] compras = new Productos[15];
-        while (op != 0 || j != 15) {
-            String info = "";
-            for (int i = 0; i < productos.length; i++) {
-                if (productos[i] != null) {
-                    if (productos[i].getMarca() == marca && productos[i].getTipo() == tipo) {
-                        if (i == 0) {
-                            info += "Seleccione producto marca " + productos[i].getMarca() + ":\n[" + (i + 1) + "]."
-                                    + productos[i].getNombre() + " - marca: " + productos[i].getMarca() + "- tipo"
-                                    + productos[i].getTipo() + " - precioXkg: " + productos[i].getPrecio() + "\n";
-                            compras[i] = productos[i];
-                        } else {
-                            info += ":\n[" + (i + 1) + "]." + productos[i].getNombre() + " - marca: "
-                                    + productos[i].getMarca() + "- tipo" + productos[i].getTipo() + " - precioXkg: "
-                                    + productos[i].getPrecio() + "\n";
-                            compras[i] = productos[i];
-                        }
-                    }
-                }
-            }
-            op = Integer.parseInt(Dialogo.Capturar(info + "\n[0].Finalizar compra", "Seleccion", 3));
-            if (op != 0) {
-                if (compras[op - 1] instanceof Verdura && compras[op - 1] != null) {
-                    op = Integer.parseInt(Dialogo.Capturar("Cuantos gramos desea: ", "Seleccion", 3));
-                    factura += "[" + j + "]" + "Nombre: " + compras[op - 1].getNombre() + " - marca: "
-                            + compras[op - 1].getMarca() + "- tipo"
-                            + compras[op - 1].getTipo() + " - precioXkg: "
-                            + compras[op - 1].getPrecio() + "- gramos:"
-                            + op + "- precio final: " + compras[op - 1].calcularPrecio(op) + "\n";
-                    j++;
-
-                } else {
-                    if (compras[op - 1] != null) {
-                        op = Integer.parseInt(Dialogo.Capturar("Cuantas unidades desea: ", "Seleccion", 3));
-                        factura += "[" + j + "]" + "Nombre: " + compras[op - 1].getNombre() + " - marca: "
-                                + compras[op - 1].getMarca() + "- tipo"
-                                + compras[op - 1].getTipo() + " - precioXunidad: "
-                                + compras[op - 1].getPrecio() + "- unidades:"
-                                + op + "- precio final: " + compras[op - 1].calcularPrecio(op) + "\n";
-                        j++;
-                    }
-                }
-            } else {
-                break;
-            }
-        }
-        return factura;
     }
 
     public void registrarProducto() {
@@ -208,20 +202,6 @@ public class Mercado {
             }
         }
         return false;
-    }
-
-    public void imprimir() {
-        for (int i = 0; i < marcas.length; i++) {
-            System.out.println(marcas[i]);
-        }
-    }
-
-    public void imprimir2() {
-        for (int i = 0; i < productos.length; i++) {
-            if (productos[i] != null) {
-                System.out.println(productos[i].getNombre() + " - " + productos[i].getMarca());
-            }
-        }
     }
 
 }

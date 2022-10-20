@@ -15,7 +15,13 @@ public class PracticaProgramada1_2 {
 
     public static void main(String[] args) {
         Menu menu = new Menu();
+        System.out.println(p());
         menu.mostrar();
 
     }
+    public static int p(){
+        return 300/1000*1500;
+    }
 }
+
+

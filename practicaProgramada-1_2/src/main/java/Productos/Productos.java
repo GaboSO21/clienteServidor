@@ -5,7 +5,7 @@ public abstract class Productos {
     protected String nombre;
     protected String tipo;
     protected String marca;
-    protected int precio;
+    protected double precio;
 
     public Productos() {
     }
@@ -40,7 +40,7 @@ public abstract class Productos {
         this.marca = marca;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -48,6 +48,6 @@ public abstract class Productos {
         this.precio = precio;
     }
 
-    public abstract int calcularPrecio(int unidad);
+    public abstract double calcularPrecio(Double unidad);
 
 }
