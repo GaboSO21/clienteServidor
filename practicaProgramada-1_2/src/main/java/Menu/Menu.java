@@ -25,14 +25,6 @@ public class Menu {
                 break;
             case 3:
                 break;
-            case 4:
-                mercado.imprimir();
-                mostrar();
-                break;
-            case 5:
-                mercado.imprimir2();
-                mostrar();
-                break;
         }
     }
 
