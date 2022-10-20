@@ -49,7 +49,7 @@ public class Mercado {
                             cont++;
                         }
                     }
-                    System.out.println(cont);
+
                     op = Integer.parseInt(Dialogo.Capturar(info + "\n[0].Finalizar compra", "Seleccion", 3));
                     if (op == 0) {
                         break;
@@ -92,7 +92,7 @@ public class Mercado {
                             cont++;
                         }
                     }
-                    System.out.println(cont);
+
                     op = Integer.parseInt(Dialogo.Capturar(info + "\n[0].Finalizar compra", "Seleccion", 3));
                     if (op == 0) {
                         break;
@@ -128,23 +128,33 @@ public class Mercado {
                 Productos verdura = new Verdura(Dialogo.Capturar("Ingrese el nombre de la verdura:", "Verdura", 3),
                         seleccionarMarca(),
                         Integer.parseInt(Dialogo.Capturar("Ingrese el precio de la verdura: ", "Verduras", 3)));
+                boolean agregado = false;
                 for (int i = 0; i < productos.length; i++) {
                     if (productos[i] == null) {
                         Dialogo.Mostrar("Producto registrado.", "Error", 1);
                         productos[i] = verdura;
+                        agregado = true;
                         break;
                     }
+                }
+                if (!agregado) {
+                    Dialogo.Mostrar("Capacidad maxima de productos alcanzada.", "Marca", 0);
                 }
                 break;
             case 2:
                 Productos abarrote = new Abarrote(Dialogo.Capturar("Ingrese el nombre del abarrote:", "Abarrote", 3),
                         seleccionarMarca(),
                         Integer.parseInt(Dialogo.Capturar("Ingrese el precio del abarrote: ", "Abarrote", 3)));
+                agregado = false;
                 for (int i = 0; i < productos.length; i++) {
                     if (productos[i] == null) {
                         productos[i] = abarrote;
+                        agregado = true;
                         break;
                     }
+                }
+                if (!agregado) {
+                    Dialogo.Mostrar("Capacidad maxima de productos alcanzada.", "Marca", 0);
                 }
                 break;
             default:
@@ -178,7 +188,9 @@ public class Mercado {
     }
 
     public void registrarMarca() {
+        boolean agregado = false;
         for (int i = 0; i < marcas.length; i++) {
+            agregado = false;
             if (marcas[i] == null) {
                 String op = Dialogo.Capturar("Ingrese una marca a registrar: ", "Marcas", 3);
                 if (buscarMarca(op)) {
@@ -186,10 +198,15 @@ public class Mercado {
                     break;
                 } else {
                     marcas[i] = op;
+                    agregado = true;
                     Dialogo.Mostrar("Marca registrada con exito.", "Marca", 1);
                     break;
                 }
+
             }
+        }
+        if (!agregado) {
+            Dialogo.Mostrar("Capacidad maxima de marcas alcanzada.", "Marca", 0);
         }
     }
 
