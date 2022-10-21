@@ -5,18 +5,13 @@
 
 package main;
 
-import Menu.Menu;
-
 /**
  *
  * @author GabrielPC
  */
-public class PracticaProgramada1_2 {
+public class Clase_6 {
 
     public static void main(String[] args) {
-        Menu menu = new Menu();
-        menu.mostrar();
-
+        System.out.println("Hello World!");
     }
-
 }
