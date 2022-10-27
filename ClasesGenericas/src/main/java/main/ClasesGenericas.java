@@ -5,13 +5,21 @@
 
 package main;
 
+import genericos.claseGenerica;
+
 /**
  *
  * @author GabrielPC
  */
-public class Clase_6 {
+public class ClasesGenericas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+       
+        claseGenerica<Integer> objetoInt = new claseGenerica<Integer>(15);
+        objetoInt.obtenerTipo();
+
+        claseGenerica<String> objetoString = new claseGenerica<String>("Juan");
+        objetoString.obtenerTipo();
+
     }
 }

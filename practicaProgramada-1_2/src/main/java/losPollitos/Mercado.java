@@ -201,12 +201,12 @@ public class Mercado {
                 String op = Dialogo.Capturar("Ingrese una marca a registrar: ", "Marcas", 3);
                 if (buscarMarca(op)) {
                     Dialogo.Mostrar("La marca ya se encuentra registrada.", "Marca", 0);
-                    break;
+                    return;
                 } else {
                     marcas[i] = op;
                     agregado = true;
                     Dialogo.Mostrar("Marca registrada con exito.", "Marca", 1);
-                    break;
+                    return;
                 }
 
             }
