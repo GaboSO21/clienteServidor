@@ -32,7 +32,7 @@ public class ApiColeccioneGenericas {
 
         // No se pueden duplicar elementos por el hashCode y el metodo equals ya
         // implementado.
-        // Mas eficiente para buscar elementos, no guarda en orden agregado
+        // Mas eficiente para buscar elementos, no guarda en orden
         Set<String> miSet = new HashSet<>();
         miSet.add("Lunes");
         miSet.add("Martes");
@@ -46,14 +46,29 @@ public class ApiColeccioneGenericas {
         miMapa.put("valor1", "Juan");
         miMapa.put("valor2", "Karla");
         miMapa.put("valor3", "Rosario");
-        //Sustituye el valor de la llave
+        // Sustituye el valor de la llave
         miMapa.put("valor3", "Carlos");
-        
+        miMapa.put("A", "Gabriel");
+        miMapa.put("Z", "Eitan");
+
         // String elemento = (String) miMapa.get("valor1");
         // System.out.println(elemento);
         // System.out.println(miMapa.keySet());
         // System.out.println(miMapa.values());
-        System.out.println(miMapa);
+        // System.out.println(miMapa);
+
+        // Iterator<String> iterator = miMapa.keySet().iterator();
+        // while (iterator.hasNext()) {
+        //     String clave = iterator.next();
+        //     String valor = miMapa.get(clave);
+        //     System.out.println("Clave: " + clave + ", valor: " + valor);
+        // }
+
+        for (String clave : miMapa.keySet()) {
+            String valor = miMapa.get(clave);
+            System.out.println("Clave: " + clave + ", valor: " + valor);
+        }
+
     }
 
     public static void imprimir(Collection<String> collection) {
