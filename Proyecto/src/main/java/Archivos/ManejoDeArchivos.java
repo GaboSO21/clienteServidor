@@ -1,6 +1,5 @@
 package Archivos;
 
-
 import java.io.*;
 import java.util.*;
 import java.util.logging.*;
@@ -42,4 +41,17 @@ public class ManejoDeArchivos {
         }
         return datos;
     }
+
+    public void clearFile() {
+        try {
+            FileWriter fw = new FileWriter("datos.txt", false);
+            PrintWriter pw = new PrintWriter(fw, false);
+            pw.flush();
+            pw.close();
+            fw.close();
+        } catch (Exception exception) {
+            System.out.println("Exception have been caught");
+        }
+    }
+
 }

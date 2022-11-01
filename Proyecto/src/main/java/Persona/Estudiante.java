@@ -3,12 +3,13 @@ package Persona;
 public class Estudiante extends Persona {
 
     private boolean beca;
-    private int grupo;
+    private int grupo, edad;
 
-    public Estudiante(String nombre, String apellido, String cedula, boolean actividad, boolean beca, int grupo) {
+    public Estudiante(String nombre, String apellido, String cedula, boolean actividad, boolean beca, int grupo, int edad) {
         super(nombre, apellido, cedula, actividad);
         this.beca = beca;
         this.grupo = grupo;
+        this.edad = edad;
     }
 
     public boolean isBeca() {
@@ -25,6 +26,14 @@ public class Estudiante extends Persona {
 
     public void setGrupo(int grupo) {
         this.grupo = grupo;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
 }

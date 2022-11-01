@@ -12,7 +12,7 @@ public class VerDatos extends javax.swing.JFrame {
         initComponents();
         ArrayList<Persona> personas = ma.LeerDatosDeArchivo();
         DefaultTableModel modelo = new DefaultTableModel();
-
+        
         modelo.addColumn("Cedula");
         modelo.addColumn("Nombre");
         modelo.addColumn("Provincia");
