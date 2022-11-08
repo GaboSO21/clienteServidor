@@ -10,6 +10,9 @@ import javax.swing.JOptionPane;
 import Archivos.ManejoDeArchivos;
 import Menu.MenuPrincipal;
 import Persona.*;
+import java.awt.*;    
+import javax.swing.*;   
+import java.awt.event.*;    
 
 /**
  *
@@ -20,8 +23,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
     /**
      * Creates new form ModuloRegistro
      */
+    CardLayout cardLayout;
     public ModuloRegistro() {
         initComponents();
+        cardLayout = (CardLayout)(pnlCards.getLayout());
     }
 
     /**
@@ -45,24 +50,8 @@ public class ModuloRegistro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
-        volverEstudiante = new javax.swing.JButton();
-        apellidosEstudiante = new javax.swing.JTextField();
-        crearEstudiante = new javax.swing.JButton();
-        nombreEstudiante = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        becaEstudiante = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        edadEstudiante = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        estadoEstudiante = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        cedulaEstudiante = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        seccionEstudiante = new javax.swing.JTextField();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         volverProfesor = new javax.swing.JButton();
         crearProfesor = new javax.swing.JButton();
@@ -97,7 +86,41 @@ public class ModuloRegistro extends javax.swing.JFrame {
         buscarUsuario = new javax.swing.JButton();
         cedulaBuscar = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        kGradientPanel1 = new keeptoo.KGradientPanel();
+        customLayout = new javax.swing.JPanel();
+        jSplitPane1 = new javax.swing.JSplitPane();
         jPanel6 = new javax.swing.JPanel();
+        moduloEstudiante = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        pnlCards = new javax.swing.JPanel();
+        pnlEstudiante = new keeptoo.KGradientPanel();
+        nombreEstudiante = new javax.swing.JTextField();
+        apellidosEstudiante = new javax.swing.JTextField();
+        cedulaEstudiante = new javax.swing.JTextField();
+        seccionEstudiante = new javax.swing.JTextField();
+        becaEstudiante = new javax.swing.JComboBox<>();
+        edadEstudiante = new javax.swing.JComboBox<>();
+        estadoEstudiante = new javax.swing.JComboBox<>();
+        crearEstudiante = new javax.swing.JButton();
+        volverEstudiante = new javax.swing.JButton();
+        pnlProfesor = new keeptoo.KGradientPanel();
+        pnlCocinero = new keeptoo.KGradientPanel();
+        pnlAdmin = new keeptoo.KGradientPanel();
+        pnlBuscar = new keeptoo.KGradientPanel();
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 652, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 401, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
@@ -106,141 +129,6 @@ public class ModuloRegistro extends javax.swing.JFrame {
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-
-        volverEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverEstudiante.setText("Volver");
-        volverEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverEstudianteActionPerformed(evt);
-            }
-        });
-
-        crearEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        crearEstudiante.setText("Crear");
-        crearEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearEstudianteActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Nombre:");
-
-        jLabel2.setText("Edad:");
-
-        jLabel3.setText("Apellidos:");
-
-        becaEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
-        becaEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.S_RESIZE_CURSOR));
-        becaEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                becaEstudianteActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Beca:");
-
-        edadEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "13", "14", "15", "16", "17" }));
-        edadEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        edadEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edadEstudianteActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setText("Estado:");
-
-        estadoEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        estadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoEstudianteActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Cedula:");
-
-        jLabel9.setText("Seccion:");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(crearEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(57, 57, 57)
-                        .addComponent(cedulaEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(50, 50, 50)
-                        .addComponent(nombreEstudiante, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(edadEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(apellidosEstudiante)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(53, 53, 53)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(seccionEstudiante)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(estadoEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(becaEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 383, Short.MAX_VALUE))))
-                    .addComponent(volverEstudiante))
-                .addGap(0, 82, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(apellidosEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(edadEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(cedulaEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(seccionEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(becaEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(estadoEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(crearEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(volverEstudiante))
-        );
-
-        jTabbedPane1.addTab("Estudiante", jPanel3);
 
         volverProfesor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         volverProfesor.setText("Volver");
@@ -295,11 +183,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(50, 50, 50)
-                                .addComponent(nombreProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE))
+                                .addComponent(nombreProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
                                 .addGap(45, 45, 45)
-                                .addComponent(apellidosProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE))
+                                .addComponent(apellidosProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel11)
                                 .addGap(58, 58, 58)
@@ -367,7 +255,14 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
         jLabel14.setText("Nombre:");
 
-        
+        salarioCocinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salarioCocineroActionPerformed(evt);
+            }
+
+            private void salarioCocineroActionPerformed(ActionEvent evt) {
+            }
+        });
 
         jLabel15.setText("Estado:");
 
@@ -426,7 +321,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
                         .addComponent(estadoCocinero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(salarioCocinero)
                         .addComponent(apellidosCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(422, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -464,7 +359,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 664, Short.MAX_VALUE)
+            .addGap(0, 652, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -502,7 +397,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
                     .addComponent(buscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19)
                     .addComponent(cedulaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(270, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -520,28 +415,250 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Buscar", jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(51, 102, 255));
+        kGradientPanel1.setkEndColor(new java.awt.Color(255, 255, 255));
+        kGradientPanel1.setkStartColor(new java.awt.Color(0, 51, 255));
+
+        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
+        kGradientPanel1.setLayout(kGradientPanel1Layout);
+        kGradientPanel1Layout.setHorizontalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        kGradientPanel1Layout.setVerticalGroup(
+            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel6.setBackground(new java.awt.Color(51, 51, 51));
+
+        moduloEstudiante.setBackground(new java.awt.Color(51, 51, 51));
+        moduloEstudiante.setForeground(new java.awt.Color(204, 204, 204));
+        moduloEstudiante.setText("Estudiante");
+        moduloEstudiante.setBorder(null);
+        moduloEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moduloEstudianteActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setForeground(new java.awt.Color(204, 204, 204));
+        jButton2.setText("Profesor");
+        jButton2.setBorder(null);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3.setForeground(new java.awt.Color(204, 204, 204));
+        jButton3.setText("Cocinero");
+        jButton3.setBorder(null);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setBackground(new java.awt.Color(51, 51, 51));
+        jButton4.setForeground(new java.awt.Color(204, 204, 204));
+        jButton4.setText("Admin");
+        jButton4.setBorder(null);
+
+        jButton5.setBackground(new java.awt.Color(51, 51, 51));
+        jButton5.setForeground(new java.awt.Color(204, 204, 204));
+        jButton5.setText("Buscar");
+        jButton5.setBorder(null);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addGap(18, 18, 18))
+        );
+
+        jSplitPane1.setLeftComponent(jPanel6);
+
+        pnlCards.setLayout(new java.awt.CardLayout());
+
+        pnlEstudiante.setkStartColor(new java.awt.Color(204, 204, 204));
+        pnlEstudiante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        nombreEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        nombreEstudiante.setForeground(new java.awt.Color(255, 255, 255));
+        nombreEstudiante.setText("Nombre");
+        nombreEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        nombreEstudiante.setCaretColor(new java.awt.Color(0, 0, 255));
+        nombreEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(nombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 321, -1));
+
+        apellidosEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        apellidosEstudiante.setForeground(new java.awt.Color(255, 255, 255));
+        apellidosEstudiante.setText("Apellidos");
+        apellidosEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        pnlEstudiante.add(apellidosEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 321, -1));
+        pnlEstudiante.add(cedulaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 321, -1));
+        pnlEstudiante.add(seccionEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 321, -1));
+
+        becaEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
+        becaEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.S_RESIZE_CURSOR));
+        becaEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                becaEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(becaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 185, 96, -1));
+
+        edadEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "13", "14", "15", "16", "17" }));
+        edadEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        edadEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edadEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(edadEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 265, 60, -1));
+
+        estadoEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+        estadoEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        estadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(estadoEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 225, 96, -1));
+
+        crearEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        crearEstudiante.setText("Crear");
+        crearEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(crearEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 318, 165, 50));
+
+        volverEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        volverEstudiante.setText("Volver");
+        volverEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverEstudianteActionPerformed(evt);
+            }
+        });
+        pnlEstudiante.add(volverEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 333, -1, -1));
+
+        pnlCards.add(pnlEstudiante, "pnlEstudiante");
+
+        pnlProfesor.setkStartColor(new java.awt.Color(204, 204, 204));
+
+        javax.swing.GroupLayout pnlProfesorLayout = new javax.swing.GroupLayout(pnlProfesor);
+        pnlProfesor.setLayout(pnlProfesorLayout);
+        pnlProfesorLayout.setHorizontalGroup(
+            pnlProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+        pnlProfesorLayout.setVerticalGroup(
+            pnlProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
+
+        pnlCards.add(pnlProfesor, "pnlProfesor");
+
+        pnlCocinero.setkEndColor(new java.awt.Color(255, 0, 51));
+
+        javax.swing.GroupLayout pnlCocineroLayout = new javax.swing.GroupLayout(pnlCocinero);
+        pnlCocinero.setLayout(pnlCocineroLayout);
+        pnlCocineroLayout.setHorizontalGroup(
+            pnlCocineroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+        pnlCocineroLayout.setVerticalGroup(
+            pnlCocineroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
+
+        pnlCards.add(pnlCocinero, "pnlCocinero");
+
+        javax.swing.GroupLayout pnlAdminLayout = new javax.swing.GroupLayout(pnlAdmin);
+        pnlAdmin.setLayout(pnlAdminLayout);
+        pnlAdminLayout.setHorizontalGroup(
+            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+        pnlAdminLayout.setVerticalGroup(
+            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
+
+        pnlCards.add(pnlAdmin, "card3");
+
+        javax.swing.GroupLayout pnlBuscarLayout = new javax.swing.GroupLayout(pnlBuscar);
+        pnlBuscar.setLayout(pnlBuscarLayout);
+        pnlBuscarLayout.setHorizontalGroup(
+            pnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
+        pnlBuscarLayout.setVerticalGroup(
+            pnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
+
+        pnlCards.add(pnlBuscar, "card2");
+
+        jSplitPane1.setRightComponent(pnlCards);
+
+        javax.swing.GroupLayout customLayoutLayout = new javax.swing.GroupLayout(customLayout);
+        customLayout.setLayout(customLayoutLayout);
+        customLayoutLayout.setHorizontalGroup(
+            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customLayoutLayout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        customLayoutLayout.setVerticalGroup(
+            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customLayoutLayout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -549,11 +666,30 @@ public class ModuloRegistro extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTabbedPane1)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void moduloEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moduloEstudianteActionPerformed
+        cardLayout.show(pnlCards, "pnlEstudiante");
+    }//GEN-LAST:event_moduloEstudianteActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        cardLayout.show(pnlCards, "pnlProfesor");
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void nombreEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreEstudianteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreEstudianteActionPerformed
 
     private void salarioProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioProfesorActionPerformed
         // TODO add your handling code here:
@@ -640,11 +776,15 @@ public class ModuloRegistro extends javax.swing.JFrame {
     private void volverProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
         dispose();
         MenuPrincipal principal = new MenuPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
     }// GEN-LAST:event_volverEstudianteActionPerformed
 
     private void volverEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
         dispose();
         MenuPrincipal principal = new MenuPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
     }// GEN-LAST:event_volverEstudianteActionPerformed
 
     private void crearProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearEstudianteActionPerformed
@@ -770,11 +910,15 @@ public class ModuloRegistro extends javax.swing.JFrame {
     private javax.swing.JButton crearCocinero;
     private javax.swing.JButton crearEstudiante;
     private javax.swing.JButton crearProfesor;
+    private javax.swing.JPanel customLayout;
     private javax.swing.JComboBox<String> edadEstudiante;
     private javax.swing.JComboBox<String> estadoCocinero;
     private javax.swing.JComboBox<String> estadoEstudiante;
     private javax.swing.JComboBox<String> estadoProfesor;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -785,24 +929,27 @@ public class ModuloRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JButton moduloEstudiante;
     private javax.swing.JTextField nombreCocinero;
     private javax.swing.JTextField nombreEstudiante;
     private javax.swing.JTextField nombreProfesor;
+    private keeptoo.KGradientPanel pnlAdmin;
+    private keeptoo.KGradientPanel pnlBuscar;
+    private javax.swing.JPanel pnlCards;
+    private keeptoo.KGradientPanel pnlCocinero;
+    private keeptoo.KGradientPanel pnlEstudiante;
+    private keeptoo.KGradientPanel pnlProfesor;
     private javax.swing.JTextField salarioCocinero;
     private javax.swing.JTextField salarioProfesor;
     private javax.swing.JTextField seccionEstudiante;
