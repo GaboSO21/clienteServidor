@@ -10,9 +10,9 @@ import javax.swing.JOptionPane;
 import Archivos.ManejoDeArchivos;
 import Menu.MenuPrincipal;
 import Persona.*;
-import java.awt.*;    
-import javax.swing.*;   
-import java.awt.event.*;    
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 
 /**
  *
@@ -24,9 +24,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
      * Creates new form ModuloRegistro
      */
     CardLayout cardLayout;
+
     public ModuloRegistro() {
         initComponents();
-        cardLayout = (CardLayout)(pnlCards.getLayout());
+        cardLayout = (CardLayout) (pnlCards.getLayout());
     }
 
     /**
@@ -47,46 +48,15 @@ public class ModuloRegistro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        volverProfesor = new javax.swing.JButton();
-        crearProfesor = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        nombreProfesor = new javax.swing.JTextField();
-        estadoProfesor = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        correoProfesor = new javax.swing.JTextField();
-        cedulaProfesor = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        salarioProfesor = new javax.swing.JTextField();
-        apellidosProfesor = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        nombreCocinero = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        apellidosCocinero = new javax.swing.JTextField();
-        salarioCocinero = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        estadoCocinero = new javax.swing.JComboBox<>();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        volverCocinero = new javax.swing.JButton();
-        crearCocinero = new javax.swing.JButton();
-        cedulaCocinero = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        volverBuscar = new javax.swing.JButton();
-        buscarUsuario = new javax.swing.JButton();
-        cedulaBuscar = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        kGradientPanel1 = new keeptoo.KGradientPanel();
         customLayout = new javax.swing.JPanel();
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel6 = new javax.swing.JPanel();
@@ -104,12 +74,31 @@ public class ModuloRegistro extends javax.swing.JFrame {
         becaEstudiante = new javax.swing.JComboBox<>();
         edadEstudiante = new javax.swing.JComboBox<>();
         estadoEstudiante = new javax.swing.JComboBox<>();
-        crearEstudiante = new javax.swing.JButton();
-        volverEstudiante = new javax.swing.JButton();
+        crearEstudiante = new com.k33ptoo.components.KButton();
+        volverEstudiante = new com.k33ptoo.components.KButton();
         pnlProfesor = new keeptoo.KGradientPanel();
+        nombreProfesor = new javax.swing.JTextField();
+        apellidosProfesor = new javax.swing.JTextField();
+        correoProfesor = new javax.swing.JTextField();
+        cedulaProfesor = new javax.swing.JTextField();
+        estadoProfesor = new javax.swing.JComboBox<>();
+        salarioProfesor = new javax.swing.JTextField();
+        crearProfesor = new com.k33ptoo.components.KButton();
+        volverProfesor = new com.k33ptoo.components.KButton();
         pnlCocinero = new keeptoo.KGradientPanel();
+        cedulaCocinero = new javax.swing.JTextField();
+        nombreCocinero = new javax.swing.JTextField();
+        apellidosCocinero = new javax.swing.JTextField();
+        salarioCocinero = new javax.swing.JTextField();
+        estadoCocinero = new javax.swing.JComboBox<>();
+        crearCocinero = new com.k33ptoo.components.KButton();
+        volverCocinero = new com.k33ptoo.components.KButton();
         pnlAdmin = new keeptoo.KGradientPanel();
         pnlBuscar = new keeptoo.KGradientPanel();
+        cedulaBuscar = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        buscarPersona = new com.k33ptoo.components.KButton();
+        kButton2 = new com.k33ptoo.components.KButton();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -125,309 +114,6 @@ public class ModuloRegistro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
         setBackground(new java.awt.Color(0, 204, 204));
-
-        jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        jTabbedPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-
-        volverProfesor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverProfesor.setText("Volver");
-        volverProfesor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverProfesorActionPerformed(evt);
-            }
-        });
-
-        crearProfesor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        crearProfesor.setText("Crear");
-        crearProfesor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearProfesorActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setText("Nombre:");
-
-        estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoProfesor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoProfesorActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setText("Estado:");
-
-        jLabel10.setText("Apellidos:");
-
-        jLabel11.setText("Correo:");
-
-        jLabel12.setText("Cedula:");
-
-        jLabel13.setText("Salario:");
-
-        salarioProfesor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salarioProfesorActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(50, 50, 50)
-                                .addComponent(nombreProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(45, 45, 45)
-                                .addComponent(apellidosProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addGap(58, 58, 58)
-                                .addComponent(correoProfesor))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(57, 57, 57)
-                                .addComponent(cedulaProfesor))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel13))
-                                .addGap(59, 59, 59)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(estadoProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(salarioProfesor)))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(212, 212, 212)
-                                .addComponent(crearProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(246, 246, 246)
-                                .addComponent(volverProfesor)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(apellidosProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel11)
-                    .addComponent(correoProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cedulaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(estadoProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(salarioProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(crearProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(volverProfesor)
-                .addGap(32, 32, 32))
-        );
-
-        jTabbedPane1.addTab("Profesor", jPanel1);
-
-        jLabel14.setText("Nombre:");
-
-        salarioCocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salarioCocineroActionPerformed(evt);
-            }
-
-            private void salarioCocineroActionPerformed(ActionEvent evt) {
-            }
-        });
-
-        jLabel15.setText("Estado:");
-
-        estadoCocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoCocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                estadoCocineroActionPerformed(evt);
-            }
-        });
-
-        jLabel17.setText("Apellidos:");
-
-        jLabel18.setText("Salario:");
-
-        volverCocinero.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverCocinero.setText("Volver");
-        volverCocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverCocineroActionPerformed(evt);
-            }
-        });
-
-        crearCocinero.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        crearCocinero.setText("Crear");
-        crearCocinero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearCocineroActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setText("Cedula:");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(crearCocinero)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(volverCocinero)
-                .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel16))
-                .addGap(45, 45, 45)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cedulaCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(nombreCocinero)
-                        .addComponent(estadoCocinero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(salarioCocinero)
-                        .addComponent(apellidosCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(410, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(apellidosCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cedulaCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel15)
-                    .addComponent(estadoCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salarioCocinero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(volverCocinero)
-                    .addComponent(crearCocinero))
-                .addContainerGap())
-        );
-
-        jTabbedPane1.addTab("Cocinero", jPanel2);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 652, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 401, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Admin", jPanel4);
-
-        volverBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverBuscar.setText("Volver");
-        volverBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverBuscarActionPerformed(evt);
-            }
-        });
-
-        buscarUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        buscarUsuario.setText("Buscar");
-        buscarUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buscarUsuarioActionPerformed(evt);
-            }
-        });
-
-        jLabel19.setText("Introduzca la cedula:");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(volverBuscar)
-                    .addComponent(buscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19)
-                    .addComponent(cedulaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(270, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cedulaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buscarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(volverBuscar)
-                .addContainerGap(205, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Buscar", jPanel5);
-
-        kGradientPanel1.setkEndColor(new java.awt.Color(255, 255, 255));
-        kGradientPanel1.setkStartColor(new java.awt.Color(0, 51, 255));
-
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         jPanel6.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -470,6 +156,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
         jButton5.setForeground(new java.awt.Color(204, 204, 204));
         jButton5.setText("Buscar");
         jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -505,103 +196,272 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
         pnlCards.setLayout(new java.awt.CardLayout());
 
-        pnlEstudiante.setkStartColor(new java.awt.Color(204, 204, 204));
+        pnlEstudiante.setkEndColor(new java.awt.Color(255, 255, 255));
+        pnlEstudiante.setkStartColor(new java.awt.Color(153, 153, 153));
         pnlEstudiante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nombreEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        nombreEstudiante.setForeground(new java.awt.Color(255, 255, 255));
-        nombreEstudiante.setText("Nombre");
-        nombreEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        nombreEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        nombreEstudiante.setText("Nombre...");
+        nombreEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         nombreEstudiante.setCaretColor(new java.awt.Color(0, 0, 255));
+        nombreEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreEstudianteMouseClicked(evt);
+            }
+        });
         nombreEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(nombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 321, -1));
+        pnlEstudiante.add(nombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
 
         apellidosEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        apellidosEstudiante.setForeground(new java.awt.Color(255, 255, 255));
-        apellidosEstudiante.setText("Apellidos");
-        apellidosEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        pnlEstudiante.add(apellidosEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 321, -1));
-        pnlEstudiante.add(cedulaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 321, -1));
-        pnlEstudiante.add(seccionEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 321, -1));
+        apellidosEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosEstudiante.setText("Apellidos..");
+        apellidosEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                apellidosEstudianteMouseClicked(evt);
+            }
+        });
+        pnlEstudiante.add(apellidosEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
 
+        cedulaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        cedulaEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        cedulaEstudiante.setText("Cedula...");
+        cedulaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cedulaEstudianteMouseClicked(evt);
+            }
+        });
+        pnlEstudiante.add(cedulaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 321, -1));
+
+        seccionEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        seccionEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        seccionEstudiante.setText("Seccion...");
+        seccionEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        seccionEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                seccionEstudianteMouseClicked(evt);
+            }
+        });
+        pnlEstudiante.add(seccionEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 321, -1));
+
+        becaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        becaEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         becaEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
+        becaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         becaEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.S_RESIZE_CURSOR));
         becaEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 becaEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(becaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 185, 96, -1));
+        pnlEstudiante.add(becaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 96, -1));
 
+        edadEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        edadEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         edadEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "13", "14", "15", "16", "17" }));
+        edadEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         edadEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         edadEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 edadEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(edadEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 265, 60, -1));
+        pnlEstudiante.add(edadEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 60, -1));
 
+        estadoEstudiante.setBackground(new java.awt.Color(255, 255, 255));
+        estadoEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         estadoEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+        estadoEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         estadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(estadoEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 225, 96, -1));
+        pnlEstudiante.add(estadoEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 96, -1));
 
-        crearEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         crearEstudiante.setText("Crear");
+        crearEstudiante.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        crearEstudiante.setkEndColor(new java.awt.Color(51, 51, 51));
+        crearEstudiante.setkHoverColor(new java.awt.Color(102, 102, 102));
+        crearEstudiante.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        crearEstudiante.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        crearEstudiante.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        crearEstudiante.setkStartColor(new java.awt.Color(51, 51, 51));
         crearEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 crearEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(crearEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(214, 318, 165, 50));
+        pnlEstudiante.add(crearEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 150, -1));
 
-        volverEstudiante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         volverEstudiante.setText("Volver");
+        volverEstudiante.setkBackGroundColor(new java.awt.Color(51, 51, 51));
+        volverEstudiante.setkEndColor(new java.awt.Color(102, 102, 102));
+        volverEstudiante.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        volverEstudiante.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        volverEstudiante.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        volverEstudiante.setkStartColor(new java.awt.Color(51, 51, 51));
         volverEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverEstudianteActionPerformed(evt);
             }
         });
-        pnlEstudiante.add(volverEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 333, -1, -1));
+        pnlEstudiante.add(volverEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 80, 30));
 
         pnlCards.add(pnlEstudiante, "pnlEstudiante");
 
-        pnlProfesor.setkStartColor(new java.awt.Color(204, 204, 204));
+        pnlProfesor.setkEndColor(new java.awt.Color(255, 255, 255));
+        pnlProfesor.setkStartColor(new java.awt.Color(153, 153, 153));
+        pnlProfesor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout pnlProfesorLayout = new javax.swing.GroupLayout(pnlProfesor);
-        pnlProfesor.setLayout(pnlProfesorLayout);
-        pnlProfesorLayout.setHorizontalGroup(
-            pnlProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
-        pnlProfesorLayout.setVerticalGroup(
-            pnlProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 374, Short.MAX_VALUE)
-        );
+        nombreProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        nombreProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        nombreProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlProfesor.add(nombreProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
+
+        apellidosProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        apellidosProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlProfesor.add(apellidosProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
+
+        correoProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        correoProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        correoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlProfesor.add(correoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 320, -1));
+
+        cedulaProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        cedulaProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        cedulaProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlProfesor.add(cedulaProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 321, -1));
+
+        estadoProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        estadoProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+        estadoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoProfesorActionPerformed(evt);
+            }
+        });
+        pnlProfesor.add(estadoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 87, -1));
+
+        salarioProfesor.setBackground(new java.awt.Color(255, 255, 255));
+        salarioProfesor.setForeground(new java.awt.Color(0, 0, 0));
+        salarioProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salarioProfesorActionPerformed(evt);
+            }
+        });
+        pnlProfesor.add(salarioProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 321, -1));
+
+        crearProfesor.setText("Crear");
+        crearProfesor.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        crearProfesor.setkEndColor(new java.awt.Color(51, 51, 51));
+        crearProfesor.setkHoverColor(new java.awt.Color(102, 102, 102));
+        crearProfesor.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        crearProfesor.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        crearProfesor.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        crearProfesor.setkStartColor(new java.awt.Color(51, 51, 51));
+        crearProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearProfesorActionPerformed(evt);
+            }
+        });
+        pnlProfesor.add(crearProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 150, -1));
+
+        volverProfesor.setText("Volver");
+        volverProfesor.setToolTipText("");
+        volverProfesor.setkBackGroundColor(new java.awt.Color(51, 51, 51));
+        volverProfesor.setkEndColor(new java.awt.Color(102, 102, 102));
+        volverProfesor.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        volverProfesor.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        volverProfesor.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        volverProfesor.setkStartColor(new java.awt.Color(51, 51, 51));
+        volverProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverProfesorActionPerformed(evt);
+            }
+        });
+        pnlProfesor.add(volverProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 80, 30));
 
         pnlCards.add(pnlProfesor, "pnlProfesor");
 
-        pnlCocinero.setkEndColor(new java.awt.Color(255, 0, 51));
+        pnlCocinero.setkEndColor(new java.awt.Color(255, 255, 255));
+        pnlCocinero.setkStartColor(new java.awt.Color(153, 153, 153));
+        pnlCocinero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout pnlCocineroLayout = new javax.swing.GroupLayout(pnlCocinero);
-        pnlCocinero.setLayout(pnlCocineroLayout);
-        pnlCocineroLayout.setHorizontalGroup(
-            pnlCocineroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
-        pnlCocineroLayout.setVerticalGroup(
-            pnlCocineroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 374, Short.MAX_VALUE)
-        );
+        cedulaCocinero.setBackground(new java.awt.Color(255, 255, 255));
+        cedulaCocinero.setForeground(new java.awt.Color(0, 0, 0));
+        cedulaCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlCocinero.add(cedulaCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 321, -1));
+
+        nombreCocinero.setBackground(new java.awt.Color(255, 255, 255));
+        nombreCocinero.setForeground(new java.awt.Color(0, 0, 0));
+        nombreCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlCocinero.add(nombreCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
+
+        apellidosCocinero.setBackground(new java.awt.Color(255, 255, 255));
+        apellidosCocinero.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        pnlCocinero.add(apellidosCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
+
+        salarioCocinero.setBackground(new java.awt.Color(255, 255, 255));
+        salarioCocinero.setForeground(new java.awt.Color(0, 0, 0));
+        salarioCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioCocinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salarioCocineroActionPerformed(evt);
+            }
+        });
+        pnlCocinero.add(salarioCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 321, -1));
+
+        estadoCocinero.setBackground(new java.awt.Color(255, 255, 255));
+        estadoCocinero.setForeground(new java.awt.Color(0, 0, 0));
+        estadoCocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
+        estadoCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoCocinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadoCocineroActionPerformed(evt);
+            }
+        });
+        pnlCocinero.add(estadoCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 102, -1));
+
+        crearCocinero.setText("Crear");
+        crearCocinero.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        crearCocinero.setkEndColor(new java.awt.Color(51, 51, 51));
+        crearCocinero.setkHoverColor(new java.awt.Color(102, 102, 102));
+        crearCocinero.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        crearCocinero.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        crearCocinero.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        crearCocinero.setkStartColor(new java.awt.Color(51, 51, 51));
+        crearCocinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearCocineroActionPerformed(evt);
+            }
+        });
+        pnlCocinero.add(crearCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 150, -1));
+
+        volverCocinero.setText("Volver");
+        volverCocinero.setkBackGroundColor(new java.awt.Color(51, 51, 51));
+        volverCocinero.setkEndColor(new java.awt.Color(102, 102, 102));
+        volverCocinero.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        volverCocinero.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        volverCocinero.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        volverCocinero.setkStartColor(new java.awt.Color(51, 51, 51));
+        volverCocinero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverCocineroActionPerformed(evt);
+            }
+        });
+        pnlCocinero.add(volverCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 80, 30));
 
         pnlCards.add(pnlCocinero, "pnlCocinero");
 
@@ -618,18 +478,41 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
         pnlCards.add(pnlAdmin, "card3");
 
-        javax.swing.GroupLayout pnlBuscarLayout = new javax.swing.GroupLayout(pnlBuscar);
-        pnlBuscar.setLayout(pnlBuscarLayout);
-        pnlBuscarLayout.setHorizontalGroup(
-            pnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
-        pnlBuscarLayout.setVerticalGroup(
-            pnlBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 374, Short.MAX_VALUE)
-        );
+        pnlBuscar.setkEndColor(new java.awt.Color(255, 255, 255));
+        pnlBuscar.setkStartColor(new java.awt.Color(153, 153, 153));
+        pnlBuscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pnlBuscar.add(cedulaBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 167, 41));
 
-        pnlCards.add(pnlBuscar, "card2");
+        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel19.setText("Introduzca la cedula:");
+        pnlBuscar.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, -1, -1));
+
+        buscarPersona.setText("Buscar");
+        buscarPersona.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        buscarPersona.setkEndColor(new java.awt.Color(51, 51, 51));
+        buscarPersona.setkHoverColor(new java.awt.Color(102, 102, 102));
+        buscarPersona.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        buscarPersona.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        buscarPersona.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        buscarPersona.setkStartColor(new java.awt.Color(51, 51, 51));
+        buscarPersona.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarPersonaActionPerformed(evt);
+            }
+        });
+        pnlBuscar.add(buscarPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 100, 40));
+
+        kButton2.setText("Volver");
+        kButton2.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        kButton2.setkEndColor(new java.awt.Color(51, 51, 51));
+        kButton2.setkHoverColor(new java.awt.Color(102, 102, 102));
+        kButton2.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        kButton2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        kButton2.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        kButton2.setkStartColor(new java.awt.Color(51, 51, 51));
+        pnlBuscar.add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 80, 30));
+
+        pnlCards.add(pnlBuscar, "pnlBuscar");
 
         jSplitPane1.setRightComponent(pnlCards);
 
@@ -652,51 +535,19 @@ public class ModuloRegistro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTabbedPane1)
-                    .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, 0)
-                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void moduloEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moduloEstudianteActionPerformed
-        cardLayout.show(pnlCards, "pnlEstudiante");
-    }//GEN-LAST:event_moduloEstudianteActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        cardLayout.show(pnlCards, "pnlProfesor");
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void nombreEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreEstudianteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreEstudianteActionPerformed
-
-    private void salarioProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioProfesorActionPerformed
-        // TODO add your handling code here:
-    }// GEN-LAST:event_salarioProfesorActionPerformed
-
-    private void buscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_buscarUsuarioActionPerformed
-
+    private void buscarPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPersonaActionPerformed
         List<Persona> personas = new ManejoDeArchivos().LeerDatosDeArchivo();
         for (Persona persona : personas) {
             if ((persona instanceof Estudiante) && (cedulaBuscar.getText().equals(persona.getCedula()))) {
@@ -718,20 +569,31 @@ public class ModuloRegistro extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(rootPane, "El usuario no fue encontrado.", "Error", 0);
         }
-    }// GEN-LAST:event_buscarUsuarioActionPerformed
+    }//GEN-LAST:event_buscarPersonaActionPerformed
 
-    private void volverBuscarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverBuscarActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        cardLayout.show(pnlCards, "pnlBuscar");
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void volverEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
         dispose();
         MenuPrincipal principal = new MenuPrincipal();
-    }// GEN-LAST:event_volverBuscarActionPerformed
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
+    }// GEN-LAST:event_volverEstudianteActionPerformed
 
-    private void estadoCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoCocineroActionPerformed
-
-    }// GEN-LAST:event_estadoCocineroActionPerformed
+    private void volverProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverProfesorActionPerformed
+        dispose();
+        MenuPrincipal principal = new MenuPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
+    }// GEN-LAST:event_volverProfesorActionPerformed
 
     private void volverCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverCocineroActionPerformed
         dispose();
         MenuPrincipal principal = new MenuPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
     }// GEN-LAST:event_volverCocineroActionPerformed
 
     private void crearCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearCocineroActionPerformed
@@ -769,25 +631,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         salarioCocinero.setText("");
     }// GEN-LAST:event_crearCocineroActionPerformed
 
-    private void estadoProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoProfesorActionPerformed
-
-    }// GEN-LAST:event_estadoProfesorActionPerformed
-
-    private void volverProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
-        dispose();
-        MenuPrincipal principal = new MenuPrincipal();
-        principal.setVisible(true);
-        principal.setLocationRelativeTo(null);
-    }// GEN-LAST:event_volverEstudianteActionPerformed
-
-    private void volverEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
-        dispose();
-        MenuPrincipal principal = new MenuPrincipal();
-        principal.setVisible(true);
-        principal.setLocationRelativeTo(null);
-    }// GEN-LAST:event_volverEstudianteActionPerformed
-
-    private void crearProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearEstudianteActionPerformed
+    private void crearProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearProfesorActionPerformed
         String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
                 cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
         double salario = Double.parseDouble(salarioProfesor.getText());
@@ -822,8 +666,43 @@ public class ModuloRegistro extends javax.swing.JFrame {
         cedulaProfesor.setText("");
         salarioProfesor.setText("");
         JOptionPane.showMessageDialog(rootPane, "Profesor creado con exito.", "Registro", 1);
+    }// GEN-LAST:event_crearProfesorActionPerformed
 
-    }// GEN-LAST:event_crearEstudianteActionPerformed
+    private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton1ActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_kButton1ActionPerformed
+
+    private void nombreEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_nombreEstudianteMouseClicked
+        nombreEstudiante.setText("");
+    }// GEN-LAST:event_nombreEstudianteMouseClicked
+
+    private void apellidosEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_apellidosEstudianteMouseClicked
+        apellidosEstudiante.setText("");
+    }// GEN-LAST:event_apellidosEstudianteMouseClicked
+
+    private void cedulaEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cedulaEstudianteMouseClicked
+        cedulaEstudiante.setText("");
+    }// GEN-LAST:event_cedulaEstudianteMouseClicked
+
+    private void seccionEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_seccionEstudianteMouseClicked
+        seccionEstudiante.setText("");
+    }// GEN-LAST:event_seccionEstudianteMouseClicked
+
+    private void moduloEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_moduloEstudianteActionPerformed
+        cardLayout.show(pnlCards, "pnlEstudiante");
+    }// GEN-LAST:event_moduloEstudianteActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
+        cardLayout.show(pnlCards, "pnlProfesor");
+    }// GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
+        cardLayout.show(pnlCards, "pnlCocinero");
+    }// GEN-LAST:event_jButton3ActionPerformed
+
+    private void nombreEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_nombreEstudianteActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_nombreEstudianteActionPerformed
 
     private void crearEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearEstudianteActionPerformed
         String nombre = nombreEstudiante.getText(), apellido = apellidosEstudiante.getText(),
@@ -884,6 +763,23 @@ public class ModuloRegistro extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Estudiante creado con exito.", "Registro", 1);
     }// GEN-LAST:event_crearEstudianteActionPerformed
 
+    private void salarioProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioProfesorActionPerformed
+        // TODO add your handling code here:
+    }// GEN-LAST:event_salarioProfesorActionPerformed
+
+    private void volverBuscarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverBuscarActionPerformed
+        dispose();
+        MenuPrincipal principal = new MenuPrincipal();
+    }// GEN-LAST:event_volverBuscarActionPerformed
+
+    private void estadoCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoCocineroActionPerformed
+
+    }// GEN-LAST:event_estadoCocineroActionPerformed
+
+    private void salarioCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoCocineroActionPerformed
+
+    }// GEN-LAST:event_estadoCocineroActionPerformed
+
     private void becaEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_becaEstudianteActionPerformed
 
     }// GEN-LAST:event_becaEstudianteActionPerformed
@@ -896,20 +792,24 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
     }// GEN-LAST:event_estadoEstudianteActionPerformed
 
+    private void estadoProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioProfesorActionPerformed
+
+    }// GEN-LAST:event_salarioProfesorActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosCocinero;
     private javax.swing.JTextField apellidosEstudiante;
     private javax.swing.JTextField apellidosProfesor;
     private javax.swing.JComboBox<String> becaEstudiante;
-    private javax.swing.JButton buscarUsuario;
+    private com.k33ptoo.components.KButton buscarPersona;
     private javax.swing.JTextField cedulaBuscar;
     private javax.swing.JTextField cedulaCocinero;
     private javax.swing.JTextField cedulaEstudiante;
     private javax.swing.JTextField cedulaProfesor;
     private javax.swing.JTextField correoProfesor;
-    private javax.swing.JButton crearCocinero;
-    private javax.swing.JButton crearEstudiante;
-    private javax.swing.JButton crearProfesor;
+    private com.k33ptoo.components.KButton crearCocinero;
+    private com.k33ptoo.components.KButton crearEstudiante;
+    private com.k33ptoo.components.KButton crearProfesor;
     private javax.swing.JPanel customLayout;
     private javax.swing.JComboBox<String> edadEstudiante;
     private javax.swing.JComboBox<String> estadoCocinero;
@@ -919,27 +819,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private keeptoo.KGradientPanel kGradientPanel1;
+    private com.k33ptoo.components.KButton kButton2;
     private javax.swing.JButton moduloEstudiante;
     private javax.swing.JTextField nombreCocinero;
     private javax.swing.JTextField nombreEstudiante;
@@ -953,10 +837,9 @@ public class ModuloRegistro extends javax.swing.JFrame {
     private javax.swing.JTextField salarioCocinero;
     private javax.swing.JTextField salarioProfesor;
     private javax.swing.JTextField seccionEstudiante;
-    private javax.swing.JButton volverBuscar;
-    private javax.swing.JButton volverCocinero;
-    private javax.swing.JButton volverEstudiante;
-    private javax.swing.JButton volverProfesor;
+    private com.k33ptoo.components.KButton volverCocinero;
+    private com.k33ptoo.components.KButton volverEstudiante;
+    private com.k33ptoo.components.KButton volverProfesor;
     // End of variables declaration//GEN-END:variables
 
 }
