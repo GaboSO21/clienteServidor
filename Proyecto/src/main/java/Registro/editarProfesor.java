@@ -5,7 +5,6 @@
 package Registro;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -13,10 +12,6 @@ import Archivos.ManejoDeArchivos;
 import Persona.Persona;
 import Persona.Profesor;
 
-/**
- *
- * @author GabrielPC
- */
 public class editarProfesor extends javax.swing.JFrame {
 
     /**
@@ -44,6 +39,9 @@ public class editarProfesor extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -58,16 +56,17 @@ public class editarProfesor extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         apellidosProfesor = new javax.swing.JTextField();
         salarioProfesor = new javax.swing.JTextField();
-        volverProfesor = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         cedulaProfesor = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        editarProfesor = new javax.swing.JButton();
+        editarBtn = new com.k33ptoo.components.KButton();
+        volver = new com.k33ptoo.components.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,14 +77,20 @@ public class editarProfesor extends javax.swing.JFrame {
                 jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 0, Short.MAX_VALUE));
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         correoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
                 null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel2.add(correoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 132, 248, -1));
 
         jLabel11.setText("Correo:");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 138, -1, -1));
 
         jLabel10.setText("Apellidos:");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 95, -1, -1));
 
         jLabel8.setText("Estado:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 217, -1, -1));
 
         estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
         estadoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
@@ -95,14 +100,18 @@ public class editarProfesor extends javax.swing.JFrame {
                 estadoProfesorActionPerformed(evt);
             }
         });
+        jPanel2.add(estadoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 212, 87, -1));
 
         nombreProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
                 null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel2.add(nombreProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 49, 248, -1));
 
         jLabel7.setText("Nombre:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 52, -1, -1));
 
         apellidosProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
                 null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel2.add(apellidosProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 92, 248, -1));
 
         salarioProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
                 null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
@@ -111,134 +120,51 @@ public class editarProfesor extends javax.swing.JFrame {
                 salarioProfesorActionPerformed(evt);
             }
         });
-
-        volverProfesor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverProfesor.setText("Volver");
-        volverProfesor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverProfesorActionPerformed(evt);
-            }
-        });
+        jPanel2.add(salarioProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 256, 248, -1));
 
         jLabel13.setText("Salario:");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 259, -1, -1));
 
         jLabel12.setText("Cedula:");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 175, -1, -1));
 
         cedulaProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
                 null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel2.add(cedulaProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 172, 248, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Editar ");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 6, -1, -1));
 
-        editarProfesor.setText("Editar");
-        editarProfesor.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED,
-                null, new java.awt.Color(51, 51, 51)));
-        editarProfesor.addActionListener(new java.awt.event.ActionListener() {
+        editarBtn.setText("Editar");
+        editarBtn.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        editarBtn.setkEndColor(new java.awt.Color(51, 51, 51));
+        editarBtn.setkHoverColor(new java.awt.Color(102, 102, 102));
+        editarBtn.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        editarBtn.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        editarBtn.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        editarBtn.setkStartColor(new java.awt.Color(51, 51, 51));
+        editarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarProfesorActionPerformed(evt);
+                editarBtnActionPerformed(evt);
             }
         });
+        jPanel2.add(editarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 150, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel7)
-                                                .addGap(50, 50, 50)
-                                                .addComponent(nombreProfesor))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel10)
-                                                .addGap(45, 45, 45)
-                                                .addComponent(apellidosProfesor))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel11)
-                                                .addGap(58, 58, 58)
-                                                .addComponent(correoProfesor))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel12)
-                                                .addGap(57, 57, 57)
-                                                .addComponent(cedulaProfesor))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout
-                                                .createSequentialGroup()
-                                                .addGroup(jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel8)
-                                                        .addComponent(jLabel13))
-                                                .addGap(59, 59, 59)
-                                                .addGroup(jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(salarioProfesor)
-                                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                                .addComponent(estadoProfesor,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 87,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(0, 0, Short.MAX_VALUE)))))
-                                .addGap(15, 15, 15))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(143, 143, 143)
-                                                .addComponent(volverProfesor))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(129, 129, 129)
-                                                .addComponent(editarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addGap(149, 149, 149)
-                                                .addComponent(jLabel9)))
-                                .addContainerGap(138, Short.MAX_VALUE)));
-        jPanel2Layout.setVerticalGroup(
-                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel7))
-                                .addGap(21, 21, 21)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel10)
-                                        .addComponent(apellidosProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel11)
-                                        .addComponent(correoProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(cedulaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel12))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(estadoProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel8))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel13)
-                                        .addComponent(salarioProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(14, 14, 14)
-                                .addComponent(editarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 40,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(volverProfesor)
-                                .addContainerGap(15, Short.MAX_VALUE)));
+        volver.setText("Volver");
+        volver.setkBackGroundColor(new java.awt.Color(51, 51, 51));
+        volver.setkEndColor(new java.awt.Color(102, 102, 102));
+        volver.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        volver.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        volver.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        volver.setkStartColor(new java.awt.Color(51, 51, 51));
+        volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverActionPerformed(evt);
+            }
+        });
+        jPanel2.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 90, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -254,11 +180,54 @@ public class editarProfesor extends javax.swing.JFrame {
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
                                 javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverActionPerformed
+        dispose();
+    }// GEN-LAST:event_volverActionPerformed
+
+    private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editarBtnActionPerformed
+        try {
+            ArrayList<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
+            ManejoDeArchivos archivo = new ManejoDeArchivos();
+            String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
+                    cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
+            double salario = Double.parseDouble(salarioProfesor.getText());
+            boolean estado = false;
+            switch (estadoProfesor.getSelectedIndex()) {
+                case 0:
+                    estado = true;
+                    break;
+                case 1:
+                    estado = false;
+                    break;
+            }
+            archivo.clearFile();
+            for (Persona persona : lista) {
+                if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
+                        && (persona instanceof Profesor)) {
+                    Profesor profesor = (Profesor) persona;
+                    profesor.setActividad(estado);
+                    profesor.setApellido(apellidos);
+                    profesor.setCedula(cedula);
+                    profesor.setCorreo(correo);
+                    profesor.setNombre(nombre);
+                    profesor.setSalario(salario);
+                    JOptionPane.showMessageDialog(rootPane, "Profesor editado con exito.", "Registro", 1);
+                    for (Persona i : lista) {
+                        archivo.EscribirEnArchivo(i);
+                    }
+                    break;
+                }
+            }
+            dispose();
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
+        }
+    }// GEN-LAST:event_editarBtnActionPerformed
 
     private void estadoProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoProfesorActionPerformed
         // TODO add your handling code here:
@@ -268,51 +237,11 @@ public class editarProfesor extends javax.swing.JFrame {
         // TODO add your handling code here:
     }// GEN-LAST:event_salarioProfesorActionPerformed
 
-    private void volverProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverProfesorActionPerformed
-        dispose();
-    }// GEN-LAST:event_volverProfesorActionPerformed
-
-    private void editarProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-        ArrayList<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-        ManejoDeArchivos archivo = new ManejoDeArchivos();
-        String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
-                cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
-        double salario = Double.parseDouble(salarioProfesor.getText());
-        boolean estado = false;
-        switch (estadoProfesor.getSelectedIndex()) {
-            case 0:
-                estado = true;
-                break;
-            case 1:
-                estado = false;
-                break;
-        }
-        archivo.clearFile();
-        for (Persona persona : lista) {
-            if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
-                    && (persona instanceof Profesor)) {
-                Profesor profesor = (Profesor) persona;
-                profesor.setActividad(estado);
-                profesor.setApellido(apellidos);
-                profesor.setCedula(cedula);
-                profesor.setCorreo(correo);
-                profesor.setNombre(nombre);
-                profesor.setSalario(salario);
-                JOptionPane.showMessageDialog(rootPane, "Profesor editado con exito.", "Registro", 1);
-                for (Persona i : lista) {
-                    archivo.EscribirEnArchivo(i);
-                }
-                break;
-            }
-        }
-        dispose();
-    }// GEN-LAST:event_jButton1ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosProfesor;
     private javax.swing.JTextField cedulaProfesor;
     private javax.swing.JTextField correoProfesor;
-    private javax.swing.JButton editarProfesor;
+    private com.k33ptoo.components.KButton editarBtn;
     private javax.swing.JComboBox<String> estadoProfesor;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -325,6 +254,6 @@ public class editarProfesor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField nombreProfesor;
     private javax.swing.JTextField salarioProfesor;
-    private javax.swing.JButton volverProfesor;
+    private com.k33ptoo.components.KButton volver;
     // End of variables declaration//GEN-END:variables
 }

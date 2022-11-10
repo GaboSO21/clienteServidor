@@ -4,20 +4,13 @@
  */
 package Registro;
 
-import java.awt.event.ActionEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
 import Archivos.ManejoDeArchivos;
 import Menu.MenuPrincipal;
 import Persona.*;
 import java.awt.*;
-import javax.swing.*;
-import java.awt.event.*;
 
-/**
- *
- * @author GabrielPC
- */
 public class ModuloRegistro extends javax.swing.JFrame {
 
     /**
@@ -53,7 +46,9 @@ public class ModuloRegistro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
@@ -103,13 +98,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 652, Short.MAX_VALUE)
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 652, Short.MAX_VALUE));
         jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 401, Short.MAX_VALUE)
-        );
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 401, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
@@ -151,6 +144,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
         jButton4.setForeground(new java.awt.Color(204, 204, 204));
         jButton4.setText("Admin");
         jButton4.setBorder(null);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(51, 51, 51));
         jButton5.setForeground(new java.awt.Color(204, 204, 204));
@@ -165,32 +163,39 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(46, 46, 46)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(48, Short.MAX_VALUE)));
         jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)));
 
         jSplitPane1.setLeftComponent(jPanel6);
 
@@ -201,9 +206,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlEstudiante.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nombreEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        nombreEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        nombreEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         nombreEstudiante.setText("Nombre...");
-        nombreEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         nombreEstudiante.setCaretColor(new java.awt.Color(0, 0, 255));
         nombreEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -218,9 +224,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlEstudiante.add(nombreEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
 
         apellidosEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        apellidosEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         apellidosEstudiante.setText("Apellidos..");
-        apellidosEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         apellidosEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 apellidosEstudianteMouseClicked(evt);
@@ -229,9 +236,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlEstudiante.add(apellidosEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
 
         cedulaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        cedulaEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        cedulaEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         cedulaEstudiante.setText("Cedula...");
-        cedulaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         cedulaEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cedulaEstudianteMouseClicked(evt);
@@ -240,9 +248,10 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlEstudiante.add(cedulaEstudiante, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 321, -1));
 
         seccionEstudiante.setBackground(new java.awt.Color(255, 255, 255));
-        seccionEstudiante.setForeground(new java.awt.Color(0, 0, 0));
+        seccionEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         seccionEstudiante.setText("Seccion...");
-        seccionEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        seccionEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         seccionEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 seccionEstudianteMouseClicked(evt);
@@ -253,7 +262,8 @@ public class ModuloRegistro extends javax.swing.JFrame {
         becaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         becaEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         becaEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
-        becaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        becaEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         becaEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.S_RESIZE_CURSOR));
         becaEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -265,7 +275,8 @@ public class ModuloRegistro extends javax.swing.JFrame {
         edadEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         edadEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         edadEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "13", "14", "15", "16", "17" }));
-        edadEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        edadEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         edadEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         edadEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +288,8 @@ public class ModuloRegistro extends javax.swing.JFrame {
         estadoEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         estadoEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         estadoEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoEstudiante
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         estadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -322,29 +334,58 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlProfesor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         nombreProfesor.setBackground(new java.awt.Color(255, 255, 255));
-        nombreProfesor.setForeground(new java.awt.Color(0, 0, 0));
-        nombreProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreProfesor.setForeground(new java.awt.Color(102, 102, 102));
+        nombreProfesor.setText("Nombre...");
+        nombreProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreProfesorMouseClicked(evt);
+            }
+        });
         pnlProfesor.add(nombreProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
 
         apellidosProfesor.setBackground(new java.awt.Color(255, 255, 255));
-        apellidosProfesor.setForeground(new java.awt.Color(0, 0, 0));
-        apellidosProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosProfesor.setForeground(new java.awt.Color(102, 102, 102));
+        apellidosProfesor.setText("Apellidos...");
+        apellidosProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                apellidosProfesorMouseClicked(evt);
+            }
+        });
         pnlProfesor.add(apellidosProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
 
         correoProfesor.setBackground(new java.awt.Color(255, 255, 255));
-        correoProfesor.setForeground(new java.awt.Color(0, 0, 0));
-        correoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        correoProfesor.setForeground(new java.awt.Color(102, 102, 102));
+        correoProfesor.setText("Correo...");
+        correoProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        correoProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                correoProfesorMouseClicked(evt);
+            }
+        });
         pnlProfesor.add(correoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 320, -1));
 
         cedulaProfesor.setBackground(new java.awt.Color(255, 255, 255));
-        cedulaProfesor.setForeground(new java.awt.Color(0, 0, 0));
-        cedulaProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaProfesor.setForeground(new java.awt.Color(102, 102, 102));
+        cedulaProfesor.setText("Cedula...");
+        cedulaProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cedulaProfesorMouseClicked(evt);
+            }
+        });
         pnlProfesor.add(cedulaProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 321, -1));
 
         estadoProfesor.setBackground(new java.awt.Color(255, 255, 255));
         estadoProfesor.setForeground(new java.awt.Color(0, 0, 0));
         estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoProfesorActionPerformed(evt);
@@ -353,14 +394,21 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlProfesor.add(estadoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 87, -1));
 
         salarioProfesor.setBackground(new java.awt.Color(255, 255, 255));
-        salarioProfesor.setForeground(new java.awt.Color(0, 0, 0));
-        salarioProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioProfesor.setForeground(new java.awt.Color(102, 102, 102));
+        salarioProfesor.setText("Salario...");
+        salarioProfesor
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salarioProfesorMouseClicked(evt);
+            }
+        });
         salarioProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salarioProfesorActionPerformed(evt);
             }
         });
-        pnlProfesor.add(salarioProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 321, -1));
+        pnlProfesor.add(salarioProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 321, -1));
 
         crearProfesor.setText("Crear");
         crearProfesor.setkBackGroundColor(new java.awt.Color(255, 255, 255));
@@ -399,23 +447,51 @@ public class ModuloRegistro extends javax.swing.JFrame {
         pnlCocinero.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cedulaCocinero.setBackground(new java.awt.Color(255, 255, 255));
-        cedulaCocinero.setForeground(new java.awt.Color(0, 0, 0));
-        cedulaCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaCocinero.setForeground(new java.awt.Color(102, 102, 102));
+        cedulaCocinero.setText("Cedula...");
+        cedulaCocinero
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cedulaCocineroMouseClicked(evt);
+            }
+        });
         pnlCocinero.add(cedulaCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 321, -1));
 
         nombreCocinero.setBackground(new java.awt.Color(255, 255, 255));
-        nombreCocinero.setForeground(new java.awt.Color(0, 0, 0));
-        nombreCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreCocinero.setForeground(new java.awt.Color(102, 102, 102));
+        nombreCocinero.setText("Nombre...");
+        nombreCocinero
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nombreCocineroMouseClicked(evt);
+            }
+        });
         pnlCocinero.add(nombreCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 321, -1));
 
         apellidosCocinero.setBackground(new java.awt.Color(255, 255, 255));
-        apellidosCocinero.setForeground(new java.awt.Color(0, 0, 0));
-        apellidosCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosCocinero.setForeground(new java.awt.Color(102, 102, 102));
+        apellidosCocinero.setText("Apellidos...");
+        apellidosCocinero
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                apellidosCocineroMouseClicked(evt);
+            }
+        });
         pnlCocinero.add(apellidosCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 321, -1));
 
         salarioCocinero.setBackground(new java.awt.Color(255, 255, 255));
-        salarioCocinero.setForeground(new java.awt.Color(0, 0, 0));
-        salarioCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioCocinero.setForeground(new java.awt.Color(102, 102, 102));
+        salarioCocinero.setText("Salario...");
+        salarioCocinero
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salarioCocineroMouseClicked(evt);
+            }
+        });
         salarioCocinero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salarioCocineroActionPerformed(evt);
@@ -426,7 +502,8 @@ public class ModuloRegistro extends javax.swing.JFrame {
         estadoCocinero.setBackground(new java.awt.Color(255, 255, 255));
         estadoCocinero.setForeground(new java.awt.Color(0, 0, 0));
         estadoCocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoCocinero
+                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoCocinero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoCocineroActionPerformed(evt);
@@ -468,13 +545,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout pnlAdminLayout = new javax.swing.GroupLayout(pnlAdmin);
         pnlAdmin.setLayout(pnlAdminLayout);
         pnlAdminLayout.setHorizontalGroup(
-            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
-        );
+                pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 596, Short.MAX_VALUE));
         pnlAdminLayout.setVerticalGroup(
-            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 374, Short.MAX_VALUE)
-        );
+                pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 374, Short.MAX_VALUE));
 
         pnlCards.add(pnlAdmin, "card3");
 
@@ -510,6 +585,11 @@ public class ModuloRegistro extends javax.swing.JFrame {
         kButton2.setkHoverForeGround(new java.awt.Color(255, 255, 255));
         kButton2.setkHoverStartColor(new java.awt.Color(102, 102, 102));
         kButton2.setkStartColor(new java.awt.Color(51, 51, 51));
+        kButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kButton2ActionPerformed(evt);
+            }
+        });
         pnlBuscar.add(kButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 80, 30));
 
         pnlCards.add(pnlBuscar, "pnlBuscar");
@@ -519,35 +599,42 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout customLayoutLayout = new javax.swing.GroupLayout(customLayout);
         customLayout.setLayout(customLayoutLayout);
         customLayoutLayout.setHorizontalGroup(
-            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customLayoutLayout.createSequentialGroup()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(customLayoutLayout.createSequentialGroup()
+                                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         customLayoutLayout.setVerticalGroup(
-            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customLayoutLayout.createSequentialGroup()
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(customLayoutLayout.createSequentialGroup()
+                                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 374,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buscarPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarPersonaActionPerformed
+    private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton2ActionPerformed
+        dispose();
+        MenuPrincipal principal = new MenuPrincipal();
+        principal.setVisible(true);
+        principal.setLocationRelativeTo(null);
+    }// GEN-LAST:event_kButton2ActionPerformed
+
+    private void buscarPersonaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_buscarPersonaActionPerformed
         List<Persona> personas = new ManejoDeArchivos().LeerDatosDeArchivo();
         for (Persona persona : personas) {
             if ((persona instanceof Estudiante) && (cedulaBuscar.getText().equals(persona.getCedula()))) {
@@ -569,11 +656,60 @@ public class ModuloRegistro extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(rootPane, "El usuario no fue encontrado.", "Error", 0);
         }
-    }//GEN-LAST:event_buscarPersonaActionPerformed
+    }// GEN-LAST:event_buscarPersonaActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton5ActionPerformed
         cardLayout.show(pnlCards, "pnlBuscar");
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }// GEN-LAST:event_jButton5ActionPerformed
+
+    private void nombreProfesorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_nombreProfesorMouseClicked
+        nombreProfesor.setText("");
+        nombreProfesor.setForeground(Color.BLACK);
+    }// GEN-LAST:event_nombreProfesorMouseClicked
+
+    private void apellidosProfesorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_apellidosProfesorMouseClicked
+        apellidosProfesor.setText("");
+        apellidosProfesor.setForeground(Color.BLACK);
+    }// GEN-LAST:event_apellidosProfesorMouseClicked
+
+    private void correoProfesorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_correoProfesorMouseClicked
+        correoProfesor.setText("");
+        correoProfesor.setForeground(Color.BLACK);
+    }// GEN-LAST:event_correoProfesorMouseClicked
+
+    private void salarioProfesorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_salarioProfesorMouseClicked
+        salarioProfesor.setText("");
+        salarioProfesor.setForeground(Color.BLACK);
+    }// GEN-LAST:event_salarioProfesorMouseClicked
+
+    private void nombreCocineroMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_nombreCocineroMouseClicked
+        nombreCocinero.setText("");
+        nombreCocinero.setForeground(Color.BLACK);
+    }// GEN-LAST:event_nombreCocineroMouseClicked
+
+    private void apellidosCocineroMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_apellidosCocineroMouseClicked
+        apellidosCocinero.setText("");
+        apellidosCocinero.setForeground(Color.BLACK);
+    }// GEN-LAST:event_apellidosCocineroMouseClicked
+
+    private void cedulaCocineroMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cedulaCocineroMouseClicked
+        cedulaCocinero.setText("");
+        cedulaCocinero.setForeground(Color.BLACK);
+    }// GEN-LAST:event_cedulaCocineroMouseClicked
+
+    private void salarioCocineroMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_salarioCocineroMouseClicked
+        salarioCocinero.setText("");
+        salarioCocinero.setForeground(Color.BLACK);
+    }// GEN-LAST:event_salarioCocineroMouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton4ActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Opcion no disponible.", "Admin", 0);
+    }// GEN-LAST:event_jButton4ActionPerformed
+
+    private void cedulaProfesorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cedulaProfesorMouseClicked
+        cedulaProfesor.setText("");
+        cedulaProfesor.setForeground(Color.BLACK);
+    }// GEN-LAST:event_cedulaProfesorMouseClicked
 
     private void volverEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverEstudianteActionPerformed
         dispose();
@@ -597,75 +733,113 @@ public class ModuloRegistro extends javax.swing.JFrame {
     }// GEN-LAST:event_volverCocineroActionPerformed
 
     private void crearCocineroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearCocineroActionPerformed
-        String nombre = nombreCocinero.getText(), apellidos = apellidosCocinero.getText(),
-                cedula = cedulaCocinero.getText();
-        double salario = Double.parseDouble(salarioCocinero.getText());
-        boolean estado = false;
-        switch (estadoCocinero.getSelectedIndex()) {
-            case 0:
-                estado = true;
-                break;
-            case 1:
-                estado = false;
-                break;
-        }
-
-        List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-        for (Persona persona : lista) {
-            if (cedulaCocinero.getText().equals(persona.getCedula())) {
-                JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
-                nombreCocinero.setText("");
-                apellidosCocinero.setText("");
-                cedulaCocinero.setText("");
-                salarioCocinero.setText("");
-                return;
+        try {
+            String nombre = nombreCocinero.getText(), apellidos = apellidosCocinero.getText(),
+                    cedula = cedulaCocinero.getText();
+            double salario = Double.parseDouble(salarioCocinero.getText());
+            boolean estado = false;
+            switch (estadoCocinero.getSelectedIndex()) {
+                case 0:
+                    estado = true;
+                    break;
+                case 1:
+                    estado = false;
+                    break;
             }
+
+            List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
+            for (Persona persona : lista) {
+                if (cedulaCocinero.getText().equals(persona.getCedula())) {
+                    JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
+                    nombreCocinero.setText("Nombre...");
+                    nombreCocinero.setForeground(Color.GRAY);
+                    apellidosCocinero.setText("Apellidos...");
+                    apellidosCocinero.setForeground(Color.GRAY);
+                    cedulaCocinero.setText("Cedula...");
+                    cedulaCocinero.setForeground(Color.GRAY);
+                    salarioCocinero.setText("Salario...");
+                    salarioCocinero.setForeground(Color.GRAY);
+                    return;
+                } else if ((nombreCocinero.getText().equals("")) || (apellidosCocinero.getText().equals(""))
+                        || (cedulaCocinero.getText().equals("")) || (salarioCocinero.getText().equals(""))) {
+                    JOptionPane.showMessageDialog(rootPane, "Campos vacios.", "Error", 0);
+                    nombreCocinero.setText("Nombre...");
+                    nombreCocinero.setForeground(Color.GRAY);
+                    apellidosCocinero.setText("Apellidos...");
+                    apellidosCocinero.setForeground(Color.GRAY);
+                    cedulaCocinero.setText("Cedula...");
+                    cedulaCocinero.setForeground(Color.GRAY);
+                    salarioCocinero.setText("Salario...");
+                    salarioCocinero.setForeground(Color.GRAY);
+                    return;
+                }
+            }
+            Persona cocinero = new Cocinero(nombre, apellidos, cedula, estado, salario);
+            ManejoDeArchivos archivo = new ManejoDeArchivos();
+            archivo.EscribirEnArchivo(cocinero);
+            JOptionPane.showMessageDialog(rootPane, "Cocinero creado con exito.", "Registro", 1);
+            nombreCocinero.setText("Nombre...");
+            nombreCocinero.setForeground(Color.GRAY);
+            apellidosCocinero.setText("Apellidos...");
+            apellidosCocinero.setForeground(Color.GRAY);
+            cedulaCocinero.setText("Cedula...");
+            cedulaCocinero.setForeground(Color.GRAY);
+            salarioCocinero.setText("Salario...");
+            salarioCocinero.setForeground(Color.GRAY);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
         }
-        Persona cocinero = new Cocinero(nombre, apellidos, cedula, estado, salario);
-        ManejoDeArchivos archivo = new ManejoDeArchivos();
-        archivo.EscribirEnArchivo(cocinero);
-        JOptionPane.showMessageDialog(rootPane, "Cocinero creado con exito.", "Registro", 1);
-        nombreCocinero.setText("");
-        apellidosCocinero.setText("");
-        cedulaCocinero.setText("");
-        salarioCocinero.setText("");
     }// GEN-LAST:event_crearCocineroActionPerformed
 
     private void crearProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearProfesorActionPerformed
-        String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
-                cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
-        double salario = Double.parseDouble(salarioProfesor.getText());
-        boolean estado = false;
-        switch (estadoProfesor.getSelectedIndex()) {
-            case 0:
-                estado = true;
-                break;
-            case 1:
-                estado = false;
-                break;
-        }
-
-        List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-        for (Persona persona : lista) {
-            if (cedulaProfesor.getText().equals(persona.getCedula())) {
-                JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
-                nombreProfesor.setText("");
-                apellidosProfesor.setText("");
-                cedulaProfesor.setText("");
-                correoProfesor.setText("");
-                salarioProfesor.setText("");
-                return;
+        try {
+            String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
+                    cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
+            double salario = Double.parseDouble(salarioProfesor.getText());
+            boolean estado = false;
+            switch (estadoProfesor.getSelectedIndex()) {
+                case 0:
+                    estado = true;
+                    break;
+                case 1:
+                    estado = false;
+                    break;
             }
+
+            List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
+            for (Persona persona : lista) {
+                if (cedulaProfesor.getText().equals(persona.getCedula())) {
+                    JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
+                    nombreProfesor.setText("Nombre...");
+                    nombreProfesor.setForeground(Color.GRAY);
+                    apellidosProfesor.setText("Apellidos...");
+                    apellidosProfesor.setForeground(Color.GRAY);
+                    cedulaProfesor.setText("Cedula...");
+                    cedulaProfesor.setForeground(Color.GRAY);
+                    correoProfesor.setText("Correo...");
+                    correoProfesor.setForeground(Color.GRAY);
+                    salarioProfesor.setText("Salario...");
+                    salarioProfesor.setForeground(Color.GRAY);
+                    return;
+                }
+            }
+            Persona profesor = new Profesor(nombre, apellidos, cedula, estado, correo, salario);
+            ManejoDeArchivos archivo = new ManejoDeArchivos();
+            archivo.EscribirEnArchivo(profesor);
+            nombreProfesor.setText("Nombre...");
+            nombreProfesor.setForeground(Color.GRAY);
+            apellidosProfesor.setText("Apellidos...");
+            apellidosProfesor.setForeground(Color.GRAY);
+            cedulaProfesor.setText("Cedula...");
+            cedulaProfesor.setForeground(Color.GRAY);
+            correoProfesor.setText("Correo...");
+            correoProfesor.setForeground(Color.GRAY);
+            salarioProfesor.setText("Salario...");
+            salarioProfesor.setForeground(Color.GRAY);
+            JOptionPane.showMessageDialog(rootPane, "Profesor creado con exito.", "Registro", 1);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
         }
-        Persona profesor = new Profesor(nombre, apellidos, cedula, estado, correo, salario);
-        ManejoDeArchivos archivo = new ManejoDeArchivos();
-        archivo.EscribirEnArchivo(profesor);
-        nombreProfesor.setText("");
-        correoProfesor.setText("");
-        apellidosProfesor.setText("");
-        cedulaProfesor.setText("");
-        salarioProfesor.setText("");
-        JOptionPane.showMessageDialog(rootPane, "Profesor creado con exito.", "Registro", 1);
     }// GEN-LAST:event_crearProfesorActionPerformed
 
     private void kButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton1ActionPerformed
@@ -674,18 +848,22 @@ public class ModuloRegistro extends javax.swing.JFrame {
 
     private void nombreEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_nombreEstudianteMouseClicked
         nombreEstudiante.setText("");
+        nombreEstudiante.setForeground(Color.BLACK);
     }// GEN-LAST:event_nombreEstudianteMouseClicked
 
     private void apellidosEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_apellidosEstudianteMouseClicked
         apellidosEstudiante.setText("");
+        apellidosEstudiante.setForeground(Color.BLACK);
     }// GEN-LAST:event_apellidosEstudianteMouseClicked
 
     private void cedulaEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cedulaEstudianteMouseClicked
         cedulaEstudiante.setText("");
+        cedulaEstudiante.setForeground(Color.BLACK);
     }// GEN-LAST:event_cedulaEstudianteMouseClicked
 
     private void seccionEstudianteMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_seccionEstudianteMouseClicked
         seccionEstudiante.setText("");
+        seccionEstudiante.setForeground(Color.BLACK);
     }// GEN-LAST:event_seccionEstudianteMouseClicked
 
     private void moduloEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_moduloEstudianteActionPerformed
@@ -705,62 +883,74 @@ public class ModuloRegistro extends javax.swing.JFrame {
     }// GEN-LAST:event_nombreEstudianteActionPerformed
 
     private void crearEstudianteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearEstudianteActionPerformed
-        String nombre = nombreEstudiante.getText(), apellido = apellidosEstudiante.getText(),
-                cedula = cedulaEstudiante.getText();
-        int edad = 0, seccion = Integer.parseInt(seccionEstudiante.getText());
-        boolean beca = false, estado = false;
-        switch (edadEstudiante.getSelectedIndex()) {
-            case 0:
-                edad = 13;
-                break;
-            case 1:
-                edad = 14;
-                break;
-            case 2:
-                edad = 15;
-                break;
-            case 3:
-                edad = 16;
-                break;
-            case 4:
-                edad = 17;
-                break;
-        }
-        switch (becaEstudiante.getSelectedIndex()) {
-            case 0:
-                beca = true;
-                break;
-            case 1:
-                beca = false;
-                break;
-        }
-        switch (estadoEstudiante.getSelectedIndex()) {
-            case 0:
-                estado = true;
-                break;
-            case 1:
-                estado = false;
-                break;
-        }
-        List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-        ManejoDeArchivos archivo = new ManejoDeArchivos();
-        for (Persona persona : lista) {
-            if ((cedulaEstudiante.getText().equals(persona.getCedula()))) {
-                JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
-                nombreEstudiante.setText("");
-                apellidosEstudiante.setText("");
-                cedulaEstudiante.setText("");
-                seccionEstudiante.setText("");
-                return;
+        try {
+            String nombre = nombreEstudiante.getText(), apellido = apellidosEstudiante.getText(),
+                    cedula = cedulaEstudiante.getText();
+            int edad = 0, seccion = Integer.parseInt(seccionEstudiante.getText());
+            boolean beca = false, estado = false;
+            switch (edadEstudiante.getSelectedIndex()) {
+                case 0:
+                    edad = 13;
+                    break;
+                case 1:
+                    edad = 14;
+                    break;
+                case 2:
+                    edad = 15;
+                    break;
+                case 3:
+                    edad = 16;
+                    break;
+                case 4:
+                    edad = 17;
+                    break;
             }
+            switch (becaEstudiante.getSelectedIndex()) {
+                case 0:
+                    beca = true;
+                    break;
+                case 1:
+                    beca = false;
+                    break;
+            }
+            switch (estadoEstudiante.getSelectedIndex()) {
+                case 0:
+                    estado = true;
+                    break;
+                case 1:
+                    estado = false;
+                    break;
+            }
+            List<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
+            ManejoDeArchivos archivo = new ManejoDeArchivos();
+            for (Persona persona : lista) {
+                if ((cedulaEstudiante.getText().equals(persona.getCedula()))) {
+                    JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.", "Error", 0);
+                    nombreEstudiante.setText("Nombre...");
+                    nombreEstudiante.setForeground(Color.GRAY);
+                    apellidosEstudiante.setText("Apellidos...");
+                    apellidosEstudiante.setForeground(Color.GRAY);
+                    cedulaEstudiante.setText("Cedula...");
+                    cedulaEstudiante.setForeground(Color.GRAY);
+                    seccionEstudiante.setText("Seccion...");
+                    seccionEstudiante.setForeground(Color.GRAY);
+                    return;
+                }
+            }
+            Persona estudiante = new Estudiante(nombre, apellido, cedula, estado, beca, seccion, edad);
+            archivo.EscribirEnArchivo(estudiante);
+            nombreEstudiante.setText("Nombre...");
+            nombreEstudiante.setForeground(Color.GRAY);
+            apellidosEstudiante.setText("Apellidos...");
+            apellidosEstudiante.setForeground(Color.GRAY);
+            cedulaEstudiante.setText("Cedula...");
+            cedulaEstudiante.setForeground(Color.GRAY);
+            seccionEstudiante.setText("Seccion...");
+            seccionEstudiante.setForeground(Color.GRAY);
+            JOptionPane.showMessageDialog(rootPane, "Estudiante creado con exito.", "Registro", 1);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
         }
-        Persona estudiante = new Estudiante(nombre, apellido, cedula, estado, beca, seccion, edad);
-        archivo.EscribirEnArchivo(estudiante);
-        nombreEstudiante.setText("");
-        apellidosEstudiante.setText("");
-        cedulaEstudiante.setText("");
-        seccionEstudiante.setText("");
-        JOptionPane.showMessageDialog(rootPane, "Estudiante creado con exito.", "Registro", 1);
     }// GEN-LAST:event_crearEstudianteActionPerformed
 
     private void salarioProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioProfesorActionPerformed

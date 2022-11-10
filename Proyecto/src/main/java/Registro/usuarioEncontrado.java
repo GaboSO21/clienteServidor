@@ -11,102 +11,100 @@ import Persona.Estudiante;
 import Persona.Persona;
 import Persona.Profesor;
 
-/**
- *
- * @author GabrielPC
- */
 public class usuarioEncontrado extends javax.swing.JFrame {
 
-        private int usuario;
-        private static Persona persona;
+    private int usuario;
+    private static Persona persona;
 
-        /**
-         * Creates new form usuarioEncontrado
-         */
-        public usuarioEncontrado(Estudiante estudiante) {
-                initComponents();
-                setVisible(true);
-                setLocationRelativeTo(null);
-                DefaultTableModel modelo = new DefaultTableModel();
-                modelo.addColumn("Nombre");
-                modelo.addColumn("Apellidos");
-                modelo.addColumn("Edad");
-                modelo.addColumn("Cedula");
-                modelo.addColumn("Seccion");
-                modelo.addColumn("Beca");
-                modelo.addColumn("Estado");
-                modelo.addRow(new Object[] { estudiante.getNombre(), estudiante.getApellido(), estudiante.getEdad(),
-                                estudiante.getCedula(), estudiante.getGrupo(), estudiante.isBeca(),
-                                estudiante.isActividad() });
-                tablaEncontrado.setModel(modelo);
-                this.usuario = 1;
-                usuarioEncontrado.persona = (Estudiante) estudiante;
-        }
+    /**
+     * Creates new form usuarioEncontrado
+     */
+    public usuarioEncontrado(Estudiante estudiante) {
+        initComponents();
+        setVisible(true);
+        setLocationRelativeTo(null);
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellidos");
+        modelo.addColumn("Edad");
+        modelo.addColumn("Cedula");
+        modelo.addColumn("Seccion");
+        modelo.addColumn("Beca");
+        modelo.addColumn("Estado");
+        modelo.addRow(new Object[] { estudiante.getNombre(), estudiante.getApellido(), estudiante.getEdad(),
+                estudiante.getCedula(), estudiante.getGrupo(), estudiante.isBeca(),
+                estudiante.isActividad() });
+        tablaEncontrado.setModel(modelo);
+        this.usuario = 1;
+        usuarioEncontrado.persona = (Estudiante) estudiante;
+    }
 
-        public usuarioEncontrado(Profesor profesor) {
-                initComponents();
-                setVisible(true);
-                setLocationRelativeTo(null);
-                DefaultTableModel modelo = new DefaultTableModel();
-                modelo.addColumn("Nombre");
-                modelo.addColumn("Apellidos");
-                modelo.addColumn("Correo");
-                modelo.addColumn("Cedula");
-                modelo.addColumn("Estado");
-                modelo.addColumn("Salario");
-                modelo.addRow(new Object[] { profesor.getNombre(), profesor.getApellido(), profesor.getCorreo(),
-                                profesor.getCedula(), profesor.isActividad(), profesor.getSalario() });
-                tablaEncontrado.setModel(modelo);
-                this.usuario = 2;
-                usuarioEncontrado.persona = (Profesor) profesor;
-        }
+    public usuarioEncontrado(Profesor profesor) {
+        initComponents();
+        setVisible(true);
+        setLocationRelativeTo(null);
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellidos");
+        modelo.addColumn("Correo");
+        modelo.addColumn("Cedula");
+        modelo.addColumn("Estado");
+        modelo.addColumn("Salario");
+        modelo.addRow(new Object[] { profesor.getNombre(), profesor.getApellido(), profesor.getCorreo(),
+                profesor.getCedula(), profesor.isActividad(), profesor.getSalario() });
+        tablaEncontrado.setModel(modelo);
+        this.usuario = 2;
+        usuarioEncontrado.persona = (Profesor) profesor;
+    }
 
-        public usuarioEncontrado(Cocinero cocinero) {
-                initComponents();
-                setVisible(true);
-                setLocationRelativeTo(null);
-                DefaultTableModel modelo = new DefaultTableModel();
-                modelo.addColumn("Nombre");
-                modelo.addColumn("Apellidos");
-                modelo.addColumn("Cedula");
-                modelo.addColumn("Estado");
-                modelo.addColumn("Salario");
-                modelo.addRow(new Object[] { cocinero.getNombre(), cocinero.getApellido(), cocinero.getCedula(),
-                                cocinero.isActividad(), cocinero.getSalario() });
-                tablaEncontrado.setModel(modelo);
-                this.usuario = 3;
-                usuarioEncontrado.persona = (Cocinero) cocinero;
-        }
+    public usuarioEncontrado(Cocinero cocinero) {
+        initComponents();
+        setVisible(true);
+        setLocationRelativeTo(null);
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellidos");
+        modelo.addColumn("Cedula");
+        modelo.addColumn("Estado");
+        modelo.addColumn("Salario");
+        modelo.addRow(new Object[] { cocinero.getNombre(), cocinero.getApellido(), cocinero.getCedula(),
+                cocinero.isActividad(), cocinero.getSalario() });
+        tablaEncontrado.setModel(modelo);
+        this.usuario = 3;
+        usuarioEncontrado.persona = (Cocinero) cocinero;
+    }
 
-        public static Persona getPersona() {
-                return persona;
-        }
+    public static Persona getPersona() {
+        return persona;
+    }
 
-        /**
-         * This method is called from within the constructor to initialize the form.
-         * WARNING: Do NOT modify this code. The content of this method is always
-         * regenerated by the Form Editor.
-         */
-        @SuppressWarnings("unchecked")
-        // <editor-fold defaultstate="collapsed" desc="Generated
-        // <editor-fold defaultstate="collapsed" desc="Generated
-        // <editor-fold defaultstate="collapsed" desc="Generated
-        // <editor-fold defaultstate="collapsed" desc="Generated
-        // <editor-fold defaultstate="collapsed" desc="Generated
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         kGradientPanel1 = new keeptoo.KGradientPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaEncontrado = new javax.swing.JTable();
-        volverBuscar = new javax.swing.JButton();
-        editarBtn = new javax.swing.JButton();
+        volver = new com.k33ptoo.components.KButton();
+        editarBtn1 = new com.k33ptoo.components.KButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         kGradientPanel1.setkEndColor(new java.awt.Color(255, 255, 255));
         kGradientPanel1.setkStartColor(new java.awt.Color(153, 153, 153));
+        kGradientPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tablaEncontrado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -135,48 +133,36 @@ public class usuarioEncontrado extends javax.swing.JFrame {
             tablaEncontrado.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        volverBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        volverBuscar.setText("Volver");
-        volverBuscar.addActionListener(new java.awt.event.ActionListener() {
+        kGradientPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 12, 399, 89));
+
+        volver.setText("Volver");
+        volver.setkBackGroundColor(new java.awt.Color(51, 51, 51));
+        volver.setkEndColor(new java.awt.Color(102, 102, 102));
+        volver.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        volver.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        volver.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        volver.setkStartColor(new java.awt.Color(51, 51, 51));
+        volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverBuscarActionPerformed(evt);
+                volverActionPerformed(evt);
             }
         });
+        kGradientPanel1.add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 90, 30));
 
-        editarBtn.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        editarBtn.setText("Editar");
-        editarBtn.addActionListener(new java.awt.event.ActionListener() {
+        editarBtn1.setText("Editar");
+        editarBtn1.setkBackGroundColor(new java.awt.Color(255, 255, 255));
+        editarBtn1.setkEndColor(new java.awt.Color(51, 51, 51));
+        editarBtn1.setkHoverColor(new java.awt.Color(102, 102, 102));
+        editarBtn1.setkHoverEndColor(new java.awt.Color(102, 102, 102));
+        editarBtn1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        editarBtn1.setkHoverStartColor(new java.awt.Color(102, 102, 102));
+        editarBtn1.setkStartColor(new java.awt.Color(51, 51, 51));
+        editarBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editarBtnActionPerformed(evt);
+                editarBtn1ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
-        kGradientPanel1.setLayout(kGradientPanel1Layout);
-        kGradientPanel1Layout.setHorizontalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(volverBuscar)
-                    .addComponent(editarBtn))
-                .addGap(172, 172, 172))
-        );
-        kGradientPanel1Layout.setVerticalGroup(
-            kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editarBtn)
-                .addGap(18, 18, 18)
-                .addComponent(volverBuscar)
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
+        kGradientPanel1.add(editarBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,48 +172,44 @@ public class usuarioEncontrado extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(kGradientPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(kGradientPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-        private void inactivarBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_inactivarBtnActionPerformed
-                // TODO add your handling code here:
-        }// GEN-LAST:event_inactivarBtnActionPerformed
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverActionPerformed
+        dispose();
+    }// GEN-LAST:event_volverActionPerformed
 
-        private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editarBtnActionPerformed
-                switch (usuario) {
-                        case 1:
-                                dispose();
-                                editarEstudiante editarEstudiante = new editarEstudiante();
-                                editarEstudiante.setVisible(true);
-                                editarEstudiante.setLocationRelativeTo(null);
-                                break;
-                        case 2:
-                                dispose();
-                                editarProfesor editarProfesor = new editarProfesor();
-                                editarProfesor.setVisible(true);
-                                editarProfesor.setLocationRelativeTo(null);
-                                break;
-                        case 3:
-                                dispose();
-                                editarCocinero editarCocinero = new editarCocinero();
-                                editarCocinero.setVisible(true);
-                                editarCocinero.setLocationRelativeTo(null);
-                                break;
-                }
-        }// GEN-LAST:event_editarBtnActionPerformed
-
-        private void volverBuscarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverBuscarActionPerformed
+    private void editarBtn1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editarBtn1ActionPerformed
+        switch (usuario) {
+            case 1:
                 dispose();
-        }// GEN-LAST:event_volverBuscarActionPerformed
+                editarEstudiante editarEstudiante = new editarEstudiante();
+                editarEstudiante.setVisible(true);
+                editarEstudiante.setLocationRelativeTo(null);
+                break;
+            case 2:
+                dispose();
+                editarProfesor editarProfesor = new editarProfesor();
+                editarProfesor.setVisible(true);
+                editarProfesor.setLocationRelativeTo(null);
+                break;
+            case 3:
+                dispose();
+                editarCocinero editarCocinero = new editarCocinero();
+                editarCocinero.setVisible(true);
+                editarCocinero.setLocationRelativeTo(null);
+                break;
+        }
+    }// GEN-LAST:event_editarBtn1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton editarBtn;
+    private com.k33ptoo.components.KButton editarBtn1;
     private javax.swing.JScrollPane jScrollPane1;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JTable tablaEncontrado;
-    private javax.swing.JButton volverBuscar;
+    private com.k33ptoo.components.KButton volver;
     // End of variables declaration//GEN-END:variables
 }
