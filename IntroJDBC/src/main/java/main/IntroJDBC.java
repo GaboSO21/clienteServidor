@@ -14,7 +14,7 @@ import java.sql.*;
 public class IntroJDBC {
 
     public static void main(String[] args) {
-        
+    
         // var url = "jdbc:mysql://localhost:3306/test?";
         // try {
         //     // Class.forName("com.mysql.cj.jdb.Driver");
