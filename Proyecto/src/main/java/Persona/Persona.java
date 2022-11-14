@@ -6,12 +6,29 @@ public abstract class Persona implements Serializable {
 
     protected String nombre, apellido, cedula;
     protected boolean actividad;
+    protected int idPersona;
+
+    public Persona() {
+
+    }
+
+    public Persona(int idPersona) {
+        this.idPersona = idPersona;
+    }
 
     public Persona(String nombre, String apellido, String cedula, boolean actividad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
         this.actividad = actividad;
+    }
+
+    public Persona(String nombre, String apellido, String cedula, boolean actividad, int idPersona) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cedula = cedula;
+        this.actividad = actividad;
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {
