@@ -1,2 +1,2 @@
 # Cliente/servidor
-Repositorio para guardar cositas :)
+Repository to keep track of the client-server course.
