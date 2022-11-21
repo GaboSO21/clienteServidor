@@ -6,7 +6,8 @@ package Menu;
 
 import javax.swing.JOptionPane;
 
-import Registro.ModuloRegistro;
+import ModuloAlmuerzo.RegistroAlmuerzo;
+import ModuloRegistro.ModuloRegistro;
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
@@ -197,11 +198,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         ModuloRegistro registro = new ModuloRegistro();
         registro.setVisible(true);
         registro.setLocationRelativeTo(null);
-        setVisible(false);
+        dispose();
     }// GEN-LAST:event_kButton1ActionPerformed
 
     private void kButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton2ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Opcion no disponible.", "Menu", 0);
+        RegistroAlmuerzo menu = new RegistroAlmuerzo();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+        dispose();
     }// GEN-LAST:event_kButton2ActionPerformed
 
     private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton3ActionPerformed

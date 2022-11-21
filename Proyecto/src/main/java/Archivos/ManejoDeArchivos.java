@@ -2,11 +2,12 @@ package Archivos;
 
 import java.io.*;
 import java.util.*;
-import java.util.logging.*;
 
+import Almuerzos.Almuerzos;
 import Persona.Persona;
 
 public class ManejoDeArchivos {
+
     public void EscribirEnArchivo(Persona persona) {
         try {
             ArrayList<Persona> personas = LeerDatosDeArchivo();
@@ -17,8 +18,43 @@ public class ManejoDeArchivos {
             }
             os.close();
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
+    }
+
+    public void EscribirEnArchivo(Almuerzos almuerzo) {
+        try {
+            ArrayList<Almuerzos> almuerzos = LeerAlmuerzos();
+            almuerzos.add(almuerzo);
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("almuerzos.txt"));
+            for (Almuerzos al : almuerzos) {
+                os.writeObject(al);
+            }
+            os.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public ArrayList<Almuerzos> LeerAlmuerzos() {
+        ArrayList<Almuerzos> datos = new ArrayList<>();
+        try {
+            ObjectInputStream s = new ObjectInputStream(new FileInputStream("almuerzos.txt"));
+            Almuerzos almuerzo = null;
+            almuerzo = (Almuerzos) s.readObject();
+            while (almuerzo != null) {
+                datos.add(almuerzo);
+                almuerzo = (Almuerzos) s.readObject();
+            }
+            s.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } finally {
+            System.out.println(datos);
+        }
+        return datos;
     }
 
     public ArrayList<Persona> LeerDatosDeArchivo() {
@@ -33,11 +69,9 @@ public class ManejoDeArchivos {
             }
             s.close();
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ManejoDeArchivos.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            System.out.println(datos);
+            ex.printStackTrace();
         }
         return datos;
     }
@@ -50,7 +84,19 @@ public class ManejoDeArchivos {
             pw.close();
             fw.close();
         } catch (Exception exception) {
-            System.out.println("Exception have been caught");
+            exception.printStackTrace();
+        }
+    }
+
+    public void clearAlmuerzos() {
+        try {
+            FileWriter fw = new FileWriter("almuerzos.txt", false);
+            PrintWriter pw = new PrintWriter(fw, false);
+            pw.flush();
+            pw.close();
+            fw.close();
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
     }
 

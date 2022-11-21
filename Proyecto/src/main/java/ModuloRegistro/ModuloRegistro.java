@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Registro;
+package ModuloRegistro;
 
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -48,7 +48,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
@@ -98,11 +98,13 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 652, Short.MAX_VALUE));
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 652, Short.MAX_VALUE)
+        );
         jPanel3Layout.setVerticalGroup(
-                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 401, Short.MAX_VALUE));
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 401, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro");
@@ -163,39 +165,32 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 78,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(48, Short.MAX_VALUE)));
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
         jPanel6Layout.setVerticalGroup(
-                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)));
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(moduloEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addGap(18, 18, 18))
+        );
 
         jSplitPane1.setLeftComponent(jPanel6);
 
@@ -208,8 +203,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         nombreEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         nombreEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         nombreEstudiante.setText("Nombre...");
-        nombreEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         nombreEstudiante.setCaretColor(new java.awt.Color(0, 0, 255));
         nombreEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -226,8 +220,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         apellidosEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         apellidosEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         apellidosEstudiante.setText("Apellidos..");
-        apellidosEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         apellidosEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 apellidosEstudianteMouseClicked(evt);
@@ -238,8 +231,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         cedulaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         cedulaEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         cedulaEstudiante.setText("Cedula...");
-        cedulaEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         cedulaEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cedulaEstudianteMouseClicked(evt);
@@ -250,8 +242,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         seccionEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         seccionEstudiante.setForeground(new java.awt.Color(102, 102, 102));
         seccionEstudiante.setText("Seccion...");
-        seccionEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        seccionEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         seccionEstudiante.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 seccionEstudianteMouseClicked(evt);
@@ -262,8 +253,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         becaEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         becaEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         becaEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
-        becaEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        becaEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         becaEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.S_RESIZE_CURSOR));
         becaEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,8 +265,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         edadEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         edadEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         edadEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "13", "14", "15", "16", "17" }));
-        edadEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        edadEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         edadEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         edadEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -288,8 +277,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         estadoEstudiante.setBackground(new java.awt.Color(255, 255, 255));
         estadoEstudiante.setForeground(new java.awt.Color(0, 0, 0));
         estadoEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoEstudiante
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoEstudiante.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoEstudiante.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         estadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -336,8 +324,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         nombreProfesor.setBackground(new java.awt.Color(255, 255, 255));
         nombreProfesor.setForeground(new java.awt.Color(102, 102, 102));
         nombreProfesor.setText("Nombre...");
-        nombreProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         nombreProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nombreProfesorMouseClicked(evt);
@@ -348,8 +335,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         apellidosProfesor.setBackground(new java.awt.Color(255, 255, 255));
         apellidosProfesor.setForeground(new java.awt.Color(102, 102, 102));
         apellidosProfesor.setText("Apellidos...");
-        apellidosProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         apellidosProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 apellidosProfesorMouseClicked(evt);
@@ -360,8 +346,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         correoProfesor.setBackground(new java.awt.Color(255, 255, 255));
         correoProfesor.setForeground(new java.awt.Color(102, 102, 102));
         correoProfesor.setText("Correo...");
-        correoProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        correoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         correoProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 correoProfesorMouseClicked(evt);
@@ -372,8 +357,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         cedulaProfesor.setBackground(new java.awt.Color(255, 255, 255));
         cedulaProfesor.setForeground(new java.awt.Color(102, 102, 102));
         cedulaProfesor.setText("Cedula...");
-        cedulaProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         cedulaProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cedulaProfesorMouseClicked(evt);
@@ -384,8 +368,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         estadoProfesor.setBackground(new java.awt.Color(255, 255, 255));
         estadoProfesor.setForeground(new java.awt.Color(0, 0, 0));
         estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoProfesorActionPerformed(evt);
@@ -396,8 +379,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         salarioProfesor.setBackground(new java.awt.Color(255, 255, 255));
         salarioProfesor.setForeground(new java.awt.Color(102, 102, 102));
         salarioProfesor.setText("Salario...");
-        salarioProfesor
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioProfesor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         salarioProfesor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 salarioProfesorMouseClicked(evt);
@@ -449,8 +431,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         cedulaCocinero.setBackground(new java.awt.Color(255, 255, 255));
         cedulaCocinero.setForeground(new java.awt.Color(102, 102, 102));
         cedulaCocinero.setText("Cedula...");
-        cedulaCocinero
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        cedulaCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         cedulaCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cedulaCocineroMouseClicked(evt);
@@ -461,8 +442,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         nombreCocinero.setBackground(new java.awt.Color(255, 255, 255));
         nombreCocinero.setForeground(new java.awt.Color(102, 102, 102));
         nombreCocinero.setText("Nombre...");
-        nombreCocinero
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        nombreCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         nombreCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nombreCocineroMouseClicked(evt);
@@ -473,8 +453,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         apellidosCocinero.setBackground(new java.awt.Color(255, 255, 255));
         apellidosCocinero.setForeground(new java.awt.Color(102, 102, 102));
         apellidosCocinero.setText("Apellidos...");
-        apellidosCocinero
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        apellidosCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         apellidosCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 apellidosCocineroMouseClicked(evt);
@@ -485,8 +464,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         salarioCocinero.setBackground(new java.awt.Color(255, 255, 255));
         salarioCocinero.setForeground(new java.awt.Color(102, 102, 102));
         salarioCocinero.setText("Salario...");
-        salarioCocinero
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        salarioCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         salarioCocinero.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 salarioCocineroMouseClicked(evt);
@@ -502,8 +480,7 @@ public class ModuloRegistro extends javax.swing.JFrame {
         estadoCocinero.setBackground(new java.awt.Color(255, 255, 255));
         estadoCocinero.setForeground(new java.awt.Color(0, 0, 0));
         estadoCocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoCocinero
-                .setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        estadoCocinero.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
         estadoCocinero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoCocineroActionPerformed(evt);
@@ -545,11 +522,13 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout pnlAdminLayout = new javax.swing.GroupLayout(pnlAdmin);
         pnlAdmin.setLayout(pnlAdminLayout);
         pnlAdminLayout.setHorizontalGroup(
-                pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 596, Short.MAX_VALUE));
+            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 596, Short.MAX_VALUE)
+        );
         pnlAdminLayout.setVerticalGroup(
-                pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 374, Short.MAX_VALUE));
+            pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 374, Short.MAX_VALUE)
+        );
 
         pnlCards.add(pnlAdmin, "card3");
 
@@ -599,30 +578,30 @@ public class ModuloRegistro extends javax.swing.JFrame {
         javax.swing.GroupLayout customLayoutLayout = new javax.swing.GroupLayout(customLayout);
         customLayout.setLayout(customLayoutLayout);
         customLayoutLayout.setHorizontalGroup(
-                customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(customLayoutLayout.createSequentialGroup()
-                                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)));
+            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customLayoutLayout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 773, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
         customLayoutLayout.setVerticalGroup(
-                customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(customLayoutLayout.createSequentialGroup()
-                                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 374,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)));
+            customLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customLayoutLayout.createSequentialGroup()
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(customLayout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
