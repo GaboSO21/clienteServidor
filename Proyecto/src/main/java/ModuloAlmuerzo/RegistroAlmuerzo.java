@@ -429,7 +429,7 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     private void annoAlmuerzoMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_annoAlmuerzoMouseClicked
         annoAlmuerzo.setText("");
         annoAlmuerzo.setForeground(Color.BLACK);
-    }// GEN-LAST:event_annoAlmuerzoMouseClicked
+    }// GEN-LAST:event_annoAlmuerzoMouseClickeda
 
     private void crearAlmuerzoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearAlmuerzoActionPerformed
         String dia = diaAlmuerzo.getText(), mes = mesAlmuerzo.getText(), anno = annoAlmuerzo.getText();
