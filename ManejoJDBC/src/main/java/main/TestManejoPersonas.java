@@ -1,30 +1,46 @@
 package main;
 
-import java.util.List;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-import datos.PersonaDAO;
-import domain.Persona;
+
 
 public class TestManejoPersonas {
     public static void main(String[] args) {
-        PersonaDAO personaDao = new PersonaDAO();
-        List<Persona> personas =  personaDao.seleccionar();
-        // System.out.println(personas);
+        // Connection conexion = null;
+        // try {
+        //     conexion = Conexion.getConnection();
+        //     // Para evitar que se haga autocommit automaticamente
+        //     if (conexion.getAutoCommit()) {
+        //         conexion.setAutoCommit(false);
+        //     }
 
-        // Persona persona = new Persona("Juan", "Aguilar", "pa123@gmail.com", "88090909");
-        // personaDao.insertar(persona);
+        //     // Transaccion, se ejecutan varias sentencias y luego se realiza el commit.
+        //     PersonaDAO personaDao = new PersonaDAO(conexion);
 
-        // personas =  personaDao.seleccionar();
-        // System.out.println(personas);
+        //     Persona updatePersona = new Persona();
+        //     updatePersona.setIdPersona(2);
+        //     updatePersona.setNombre("Gabriel");
+        //     updatePersona.setApellido("Sanchez Olveira");
+        //     updatePersona.setEmail("gso2090@gmail.com");
+        //     personaDao.actualizar(updatePersona);
 
-        // Persona personaNueva = new Persona(3, "Gabriel", "Sanchez", "fabianlolastor@gmail.com", "87097070");
-        // personaDao.actualizar(personaNueva);
+        //     Persona nuevaPersona = new Persona();
+        //     nuevaPersona.setNombre("Juanito Luis");
+        //     nuevaPersona.setApellido("Penegildollllllll");
+        //     personaDao.insertar(nuevaPersona);
 
-        Persona persona2 = new Persona(12);
-        personaDao.eliminar(persona2);
-
-
-
+        //     conexion.commit();
+        //     System.out.println("Commit succesfull.");
+        // } catch (SQLException e) {
+        //     e.printStackTrace();
+        //     System.out.println("Rollback.");
+        //     try {
+        //         conexion.rollback();
+        //     } catch (SQLException e1) {
+        //         e1.printStackTrace();
+        //     }
+        // }
 
     }
 }
