@@ -1,10 +1,11 @@
 package Planilla;
 
+import java.io.Serializable;
 import java.util.List;
 
 import Persona.Colaborador;
 
-public class Planilla implements CalculoPlanilla {
+public class Planilla implements CalculoPlanilla, Serializable {
 
     private List<Colaborador> colaboradores;
 

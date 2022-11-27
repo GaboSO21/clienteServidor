@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 
 import ModuloAlmuerzo.RegistroAlmuerzo;
 import ModuloCalculoP.RegistroColaboradores;
+import ModuloEnvio.EnvioServidor;
 import ModuloRegistro.ModuloRegistro;
 
 public class MenuPrincipal extends javax.swing.JFrame {
@@ -101,7 +102,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         kButton4.setBorder(null);
-        kButton4.setText("Not available");
+        kButton4.setText("Send module");
         kButton4.setAlignmentY(0.0F);
         kButton4.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Menu/perfil.png"))); // NOI18N
         kButton4.setIconTextGap(5);
@@ -210,7 +211,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// GEN-LAST:event_kButton3ActionPerformed
 
     private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton4ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Opcion no disponible.", "Menu", 0);
+        EnvioServidor menu = new EnvioServidor();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+        dispose();
     }// GEN-LAST:event_kButton4ActionPerformed
 
     /**
