@@ -7,6 +7,7 @@ package Menu;
 import javax.swing.JOptionPane;
 
 import ModuloAlmuerzo.RegistroAlmuerzo;
+import ModuloCalculoP.RegistroColaboradores;
 import ModuloRegistro.ModuloRegistro;
 
 public class MenuPrincipal extends javax.swing.JFrame {
@@ -81,7 +82,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         kButton3.setBorder(null);
-        kButton3.setText("Not available");
+        kButton3.setText("Template module");
         kButton3.setAlignmentY(0.0F);
         kButton3.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Menu/perfil.png"))); // NOI18N
         kButton3.setIconTextGap(5);
@@ -202,7 +203,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// GEN-LAST:event_kButton2ActionPerformed
 
     private void kButton3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton3ActionPerformed
-        JOptionPane.showMessageDialog(rootPane, "Opcion no disponible.", "Menu", 0);
+        RegistroColaboradores menu = new RegistroColaboradores();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
+        dispose();
     }// GEN-LAST:event_kButton3ActionPerformed
 
     private void kButton4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_kButton4ActionPerformed
