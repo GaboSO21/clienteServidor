@@ -31,6 +31,19 @@ public abstract class Persona implements Serializable {
         this.idPersona = idPersona;
     }
 
+    public Persona(String nombre, String apellido, String cedula) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cedula = cedula;
+    }
+
+    public Persona(String nombre, String apellido, String cedula, int idPersona) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cedula = cedula;
+        this.idPersona = idPersona;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -61,6 +74,14 @@ public abstract class Persona implements Serializable {
 
     public void setActividad(boolean actividad) {
         this.actividad = actividad;
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
     }
 
 }
