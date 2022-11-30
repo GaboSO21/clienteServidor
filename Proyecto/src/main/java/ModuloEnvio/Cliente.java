@@ -15,10 +15,6 @@ import javax.swing.table.DefaultTableModel;
 import Persona.Colaborador;
 import Planilla.Planilla;
 
-/**
- *
- * @author melis-macbook
- */
 public class Cliente extends javax.swing.JFrame implements Runnable {
 
     /**
@@ -166,11 +162,10 @@ public class Cliente extends javax.swing.JFrame implements Runnable {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        while (true)// Ejecutar el ciclo listen/accept constantemente
+        while (true)
         {
             try {
-                System.out.println("\nEsperando conexiones...");
-                Socket socket = server.accept();// Espera y se mantiene a la escucha de una conexión
+                Socket socket = server.accept();
                 ObjectInputStream stream = new ObjectInputStream(socket.getInputStream());
                 try {
                     Planilla planilla = (Planilla) stream.readObject();

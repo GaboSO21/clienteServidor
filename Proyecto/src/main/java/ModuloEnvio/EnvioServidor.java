@@ -252,7 +252,6 @@ public class EnvioServidor extends javax.swing.JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }// GEN-LAST:event_enviarPlanillaActionPerformed
 
     private void volverBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverBtnActionPerformed
