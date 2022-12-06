@@ -35,6 +35,9 @@ public class EnvioServidor extends javax.swing.JFrame {
         try {
             conexion = Conexion.getConnection();
             conexionSQL = new SQLColaborador(conexion);
+            if(conexion.getAutoCommit()){
+                conexion.setAutoCommit(false);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

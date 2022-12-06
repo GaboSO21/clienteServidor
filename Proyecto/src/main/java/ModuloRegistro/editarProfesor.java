@@ -14,11 +14,13 @@ import Persona.Profesor;
 
 public class editarProfesor extends javax.swing.JFrame {
 
-    /**
-     * Creates new form editarProfesor
-     */
+    public ManejoDeArchivos archivo;
+    public ArrayList<Persona> lista;
+
     public editarProfesor() {
         initComponents();
+        this.archivo = new ManejoDeArchivos();
+        this.lista = archivo.LeerDatosDeArchivo();
         Profesor profesor = (Profesor) usuarioEncontrado.getPersona();
         nombreProfesor.setText(profesor.getNombre());
         apellidosProfesor.setText(profesor.getApellido());
@@ -42,7 +44,8 @@ public class editarProfesor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -71,17 +74,16 @@ public class editarProfesor extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        correoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        correoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(correoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 132, 248, -1));
 
         jLabel11.setText("Correo:");
@@ -94,7 +96,8 @@ public class editarProfesor extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 217, -1, -1));
 
         estadoProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        estadoProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         estadoProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 estadoProfesorActionPerformed(evt);
@@ -102,16 +105,19 @@ public class editarProfesor extends javax.swing.JFrame {
         });
         jPanel2.add(estadoProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 212, 87, -1));
 
-        nombreProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        nombreProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(nombreProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 49, 248, -1));
 
         jLabel7.setText("Nombre:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 52, -1, -1));
 
-        apellidosProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        apellidosProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(apellidosProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 92, 248, -1));
 
-        salarioProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        salarioProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         salarioProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salarioProfesorActionPerformed(evt);
@@ -125,7 +131,8 @@ public class editarProfesor extends javax.swing.JFrame {
         jLabel12.setText("Cedula:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 175, -1, -1));
 
-        cedulaProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        cedulaProfesor.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(cedulaProfesor, new org.netbeans.lib.awtextra.AbsoluteConstraints(103, 172, 248, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -165,17 +172,18 @@ public class editarProfesor extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, 0)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -185,44 +193,60 @@ public class editarProfesor extends javax.swing.JFrame {
     }// GEN-LAST:event_volverActionPerformed
 
     private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editarBtnActionPerformed
-        try {
-            ArrayList<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-            ManejoDeArchivos archivo = new ManejoDeArchivos();
-            String nombre = nombreProfesor.getText(), apellidos = apellidosProfesor.getText(),
-                    cedula = cedulaProfesor.getText(), correo = correoProfesor.getText();
-            double salario = Double.parseDouble(salarioProfesor.getText());
-            boolean estado = false;
-            switch (estadoProfesor.getSelectedIndex()) {
-                case 0:
-                    estado = true;
-                    break;
-                case 1:
-                    estado = false;
-                    break;
-            }
-            archivo.clearFile();
-            for (Persona persona : lista) {
-                if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
-                        && (persona instanceof Profesor)) {
-                    Profesor profesor = (Profesor) persona;
-                    profesor.setActividad(estado);
-                    profesor.setApellido(apellidos);
-                    profesor.setCedula(cedula);
-                    profesor.setCorreo(correo);
-                    profesor.setNombre(nombre);
-                    profesor.setSalario(salario);
-                    JOptionPane.showMessageDialog(rootPane, "Profesor editado con exito.", "Registro", 1);
-                    for (Persona i : lista) {
-                        archivo.EscribirEnArchivo(i);
-                    }
-                    break;
+        if (revisarProfesor()) {
+            return;
+        } else {
+            try {
+                boolean estado = false;
+                switch (estadoProfesor.getSelectedIndex()) {
+                    case 0:
+                        estado = true;
+                        break;
+                    case 1:
+                        estado = false;
+                        break;
                 }
+                archivo.clearFile();
+                for (Persona persona : lista) {
+                    if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
+                            && (persona instanceof Profesor)) {
+                        Profesor profesor = (Profesor) persona;
+                        profesor.setActividad(estado);
+                        profesor.setApellido(apellidosProfesor.getText());
+                        profesor.setCedula(cedulaProfesor.getText());
+                        profesor.setCorreo(correoProfesor.getText());
+                        profesor.setNombre(nombreProfesor.getText());
+                        profesor.setSalario(Double.parseDouble(salarioProfesor.getText()));
+                        JOptionPane.showMessageDialog(rootPane, "Profesor editado con exito.", "Registro", 1);
+                        for (Persona i : lista) {
+                            archivo.EscribirEnArchivo(i);
+                        }
+                        break;
+                    }
+                }
+                dispose();
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese numero para salario.", "Error", 0);
             }
-            dispose();
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
         }
     }// GEN-LAST:event_editarBtnActionPerformed
+
+    public boolean revisarProfesor() {
+        this.lista = archivo.LeerDatosDeArchivo();
+        for (Persona persona : lista) {
+            if (cedulaProfesor.getText().equals(persona.getCedula())) {
+                JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con esa cedula.", "Error", 0);
+                return true;
+            } else if ((nombreProfesor.getText().equals("")) || (apellidosProfesor.getText().equals(""))
+                    || (cedulaProfesor.getText().equals("")) || (salarioProfesor.getText().equals(""))) {
+                JOptionPane.showMessageDialog(rootPane, "Campos vacios.", "Error", 0);
+                return true;
+            }
+        }
+
+        return false;
+
+    }
 
     private void estadoProfesorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_estadoProfesorActionPerformed
         // TODO add your handling code here:

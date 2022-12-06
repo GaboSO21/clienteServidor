@@ -5,6 +5,7 @@
 package ModuloCalculoP;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -383,7 +384,6 @@ public class RegistroColaboradores extends javax.swing.JFrame {
             } catch (SQLException e1) {
                 e1.printStackTrace();
             }
-
         }
     }
 
@@ -427,51 +427,60 @@ public class RegistroColaboradores extends javax.swing.JFrame {
     }// GEN-LAST:event_volverConteoActionPerformed
 
     private void fechasRegistradasActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_fechasRegistradasActionPerformed
-        
+
     }// GEN-LAST:event_fechasRegistradasActionPerformed
 
     private void cedulaColaboradorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_cedulaColaboradorMouseClicked
-        
+        cedulaColaborador.setText("");
+        cedulaColaborador.setForeground(Color.BLACK);
     }// GEN-LAST:event_cedulaColaboradorMouseClicked
 
     private void nombreColaboradorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_nombreColaboradorMouseClicked
-        
+        nombreColaborador.setText("");
+        nombreColaborador.setForeground(Color.BLACK);
     }// GEN-LAST:event_nombreColaboradorMouseClicked
 
     private void apellidosColaboradorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_apellidosColaboradorMouseClicked
-        
+        apellidosColaborador.setText("");
+        apellidosColaborador.setForeground(Color.BLACK);
     }// GEN-LAST:event_apellidosColaboradorMouseClicked
 
     private void salarioColaboradorMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_salarioColaboradorMouseClicked
-        
+        salarioColaborador.setText("");
+        salarioColaborador.setForeground(Color.BLACK);
     }// GEN-LAST:event_salarioColaboradorMouseClicked
 
     private void salarioColaboradorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salarioColaboradorActionPerformed
-        
+
     }// GEN-LAST:event_salarioColaboradorActionPerformed
 
     private void crearColaboradorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearColaboradorActionPerformed
-        for (Colaborador colaborador : colaboradores) {
-            if (colaborador.getCedula().equals(cedulaColaborador.getText())) {
-                JOptionPane.showMessageDialog(rootPane, "Colaborador ya existe.", getTitle(), 0);
-                return;
-            }
-        }
-        try {
-            Persona colaborador = new Colaborador(nombreColaborador.getText(), apellidosColaborador.getText(),
-                    cedulaColaborador.getText(), Integer.parseInt(salarioColaborador.getText()),
-                    Date.valueOf(annoFecha.getText() + "-" + mesFecha.getText() + "-01"));
-            conexionSQL.insert((Colaborador) colaborador);
-            conexion.commit();
-            actualizarLista();
-            actualizarSet();
-            JOptionPane.showMessageDialog(rootPane, "Colaborador registrado exitosamente.", getTitle(), 1);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (revisarColab()) {
+            return;
+        } else {
             try {
-                conexion.rollback();
-            } catch (SQLException e1) {
-                e1.printStackTrace();
+                Persona colaborador = new Colaborador(nombreColaborador.getText(), apellidosColaborador.getText(),
+                        cedulaColaborador.getText(), Integer.parseInt(salarioColaborador.getText()),
+                        Date.valueOf(annoFecha.getText() + "-" + mesFecha.getText() + "-01"));
+                conexionSQL.insert((Colaborador) colaborador);
+                conexion.commit();
+                actualizarLista();
+                actualizarSet();
+                JOptionPane.showMessageDialog(rootPane, "Colaborador registrado exitosamente.", getTitle(), 1);
+                reinicarCampos();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                try {
+                    conexion.rollback();
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Valor erroneo ingresado.", getTitle(), 0);
+                reinicarCampos();
+            } catch (IllegalArgumentException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingresar fecha valida.", getTitle(), 0);
+                reinicarCampos();
             }
         }
     }// GEN-LAST:event_crearColaboradorActionPerformed
@@ -484,20 +493,51 @@ public class RegistroColaboradores extends javax.swing.JFrame {
     }// GEN-LAST:event_volverColaboradorActionPerformed
 
     private void mesFechaMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_mesFechaMouseClicked
-        
+        mesFecha.setText("");
+        mesFecha.setForeground(Color.black);
     }// GEN-LAST:event_mesFechaMouseClicked
 
     private void mesFechaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_mesFechaActionPerformed
-        
+
     }// GEN-LAST:event_mesFechaActionPerformed
 
     private void annoFechaMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_annoFechaMouseClicked
-        
+        annoFecha.setText("");
+        annoFecha.setForeground(Color.BLACK);
     }// GEN-LAST:event_annoFechaMouseClicked
 
     private void annoFechaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_annoFechaActionPerformed
-        
+
     }// GEN-LAST:event_annoFechaActionPerformed
+
+    private void reinicarCampos() {
+        nombreColaborador.setText("Nombre...");
+        nombreColaborador.setForeground(Color.GRAY);
+        apellidosColaborador.setText("Apellidos...");
+        apellidosColaborador.setForeground(Color.GRAY);
+        cedulaColaborador.setText("Cedula..");
+        cedulaColaborador.setForeground(Color.GRAY);
+        salarioColaborador.setText("Horas");
+        salarioColaborador.setForeground(Color.GRAY);
+        annoFecha.setText("Anno...");
+        annoFecha.setForeground(Color.GRAY);
+        mesFecha.setText("Mes...");
+        mesFecha.setForeground(Color.GRAY);
+    }
+
+    private boolean revisarColab() {
+        for (Colaborador colaborador : colaboradores) {
+            if (colaborador.getCedula().equals(cedulaColaborador.getText())) {
+                JOptionPane.showMessageDialog(rootPane, "Colaborador ya existe.", getTitle(), 0);
+                return true;
+            } else if (nombreColaborador.getText().equals("") || apellidosColaborador.getText().equals("")
+                    || cedulaColaborador.getText().equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Campos vacios.", getTitle(), 0);
+                return true;
+            }
+        }
+        return false;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField annoFecha;

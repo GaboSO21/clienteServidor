@@ -5,8 +5,6 @@
 package ModuloAlmuerzo;
 
 import java.awt.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 import javax.swing.JOptionPane;
@@ -52,6 +50,7 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -80,7 +79,6 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
         volverRetiro = new com.k33ptoo.components.KButton();
         jLabel1 = new javax.swing.JLabel();
         pnlConteo = new keeptoo.KGradientPanel();
-        visualizarFecha = new com.k33ptoo.components.KButton();
         volverConteo = new com.k33ptoo.components.KButton();
         almuerzosRegistrados2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -307,21 +305,6 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
         pnlConteo.setkStartColor(new java.awt.Color(153, 153, 153));
         pnlConteo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        visualizarFecha.setText("Visualizar");
-        visualizarFecha.setkBackGroundColor(new java.awt.Color(255, 255, 255));
-        visualizarFecha.setkEndColor(new java.awt.Color(51, 51, 51));
-        visualizarFecha.setkHoverColor(new java.awt.Color(102, 102, 102));
-        visualizarFecha.setkHoverEndColor(new java.awt.Color(102, 102, 102));
-        visualizarFecha.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        visualizarFecha.setkHoverStartColor(new java.awt.Color(102, 102, 102));
-        visualizarFecha.setkStartColor(new java.awt.Color(51, 51, 51));
-        visualizarFecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                visualizarFechaActionPerformed(evt);
-            }
-        });
-        pnlConteo.add(visualizarFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 150, -1));
-
         volverConteo.setText("Volver");
         volverConteo.setkBackGroundColor(new java.awt.Color(51, 51, 51));
         volverConteo.setkEndColor(new java.awt.Color(102, 102, 102));
@@ -334,11 +317,16 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
                 volverConteoActionPerformed(evt);
             }
         });
-        pnlConteo.add(volverConteo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 80, 30));
+        pnlConteo.add(volverConteo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 80, 30));
 
         almuerzosRegistrados2.setBackground(new java.awt.Color(255, 255, 255));
         almuerzosRegistrados2.setForeground(new java.awt.Color(0, 0, 0));
         almuerzosRegistrados2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 2, new java.awt.Color(102, 102, 102)));
+        almuerzosRegistrados2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                almuerzosRegistrados2ItemStateChanged(evt);
+            }
+        });
         almuerzosRegistrados2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 almuerzosRegistrados2ActionPerformed(evt);
@@ -396,8 +384,33 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void almuerzosRegistrados2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_almuerzosRegistrados2ItemStateChanged
+        for (Almuerzos almuerzos2 : almuerzos) {
+            if (almuerzos2.getFecha().toString().replace("00:00:00 CST", "")
+                    .equals(almuerzosRegistrados2.getSelectedItem())) {
+                ArrayList<Persona> estudiantes = almuerzos2.getEstudiantes();
+                DefaultTableModel modelo = new DefaultTableModel();
+                modelo.addColumn("Nombre");
+                modelo.addColumn("Apellidos");
+                modelo.addColumn("Edad");
+                modelo.addColumn("Cedula");
+                modelo.addColumn("Seccion");
+                modelo.addColumn("Beca");
+                modelo.addColumn("Estado");
+                for (Persona persona : estudiantes) {
+                    Estudiante estudiante = (Estudiante) persona;
+                    modelo.addRow(new Object[] { estudiante.getNombre(), estudiante.getApellido(), estudiante.getEdad(),
+                            estudiante.getCedula(), estudiante.getGrupo(), estudiante.isBeca(),
+                            estudiante.isActividad() });
+                }
+                tablaAlmuerzos.setModel(modelo);
+                return;
+            }
+        }
+    }//GEN-LAST:event_almuerzosRegistrados2ItemStateChanged
+
     private void almuerzosRegistrados2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_almuerzosRegistrados2ActionPerformed
-        // TODO add your handling code here:
+
     }// GEN-LAST:event_almuerzosRegistrados2ActionPerformed
 
     private void registroAlmuerzoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_registroAlmuerzoActionPerformed
@@ -432,23 +445,47 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     }// GEN-LAST:event_annoAlmuerzoMouseClickeda
 
     private void crearAlmuerzoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearAlmuerzoActionPerformed
-        String dia = diaAlmuerzo.getText(), mes = mesAlmuerzo.getText(), anno = annoAlmuerzo.getText();
-        Almuerzos almuerzo = new Almuerzos(dia + "/" + mes + "/" + anno);
+        if (revisarAlmuerzos()) {
+            return;
+        } else {
+            Almuerzos almuerzo = new Almuerzos(
+                    diaAlmuerzo.getText() + "/" + mesAlmuerzo.getText() + "/" + annoAlmuerzo.getText());
+            archivos.EscribirEnArchivo(almuerzo);
+            almuerzosRegistrados.addItem(almuerzo.getFecha().toString().replace("00:00:00 CST", ""));
+            almuerzosRegistrados2.addItem(almuerzo.getFecha().toString().replace("00:00:00 CST", ""));
+            JOptionPane.showMessageDialog(rootPane, "Dia de almuerzo registrado.", getTitle(), 1);
+            almuerzos = archivos.LeerAlmuerzos();
+            reinicarCampos();
+        }
+    }// GEN-LAST:event_crearAlmuerzoActionPerformed
+
+    public boolean revisarAlmuerzos() {
+        Almuerzos almuerzo = new Almuerzos(
+                diaAlmuerzo.getText() + "/" + mesAlmuerzo.getText() + "/" + annoAlmuerzo.getText());
         for (Almuerzos almuerzos2 : almuerzos) {
-            if(almuerzos2.getFecha().toString().equals(almuerzo.getFecha().toString())){
+            if (almuerzos2.getFecha().toString().equals(almuerzo.getFecha().toString())) {
                 JOptionPane.showMessageDialog(rootPane, "Este dia ya ha sido registrado anteriormente.", getTitle(), 0);
-                return;
+                reinicarCampos();
+                return true;
+            } else if (diaAlmuerzo.getText().equals("") || mesAlmuerzo.getText().equals("")
+                    || annoAlmuerzo.getText().equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Campos vacios.", getTitle(), 0);
+                return true;
             }
         }
-        archivos.EscribirEnArchivo(almuerzo);
-        almuerzosRegistrados.addItem(almuerzo.getFecha().toString().replace("00:00:00 CST", ""));
-        almuerzosRegistrados2.addItem(almuerzo.getFecha().toString().replace("00:00:00 CST", ""));
-        JOptionPane.showMessageDialog(rootPane, "Dia de almuerzo registrado.", getTitle(), 1);
-        almuerzos = archivos.LeerAlmuerzos();
-        diaAlmuerzo.setText("");
-        mesAlmuerzo.setText("");
-        annoAlmuerzo.setText("");
-    }// GEN-LAST:event_crearAlmuerzoActionPerformed
+
+        return false;
+
+    }
+
+    private void reinicarCampos() {
+        diaAlmuerzo.setText("Dia...");
+        diaAlmuerzo.setForeground(Color.GRAY);
+        annoAlmuerzo.setText("Anno...");
+        annoAlmuerzo.setForeground(Color.GRAY);
+        mesAlmuerzo.setText("Mes..");
+        mesAlmuerzo.setForeground(Color.GRAY);
+    }
 
     private void volverRegistroActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverRegistroActionPerformed
         MenuPrincipal menu = new MenuPrincipal();
@@ -506,28 +543,7 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     }// GEN-LAST:event_volverRetiroActionPerformed
 
     private void visualizarFechaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_crearCocineroActionPerformed
-        for (Almuerzos almuerzos2 : almuerzos) {
-            if (almuerzos2.getFecha().toString().replace("00:00:00 CST", "")
-                    .equals(almuerzosRegistrados2.getSelectedItem())) {
-                ArrayList<Persona> estudiantes = almuerzos2.getEstudiantes();
-                DefaultTableModel modelo = new DefaultTableModel();
-                modelo.addColumn("Nombre");
-                modelo.addColumn("Apellidos");
-                modelo.addColumn("Edad");
-                modelo.addColumn("Cedula");
-                modelo.addColumn("Seccion");
-                modelo.addColumn("Beca");
-                modelo.addColumn("Estado");
-                for (Persona persona : estudiantes) {
-                    Estudiante estudiante = (Estudiante) persona;
-                    modelo.addRow(new Object[] { estudiante.getNombre(), estudiante.getApellido(), estudiante.getEdad(),
-                        estudiante.getCedula(), estudiante.getGrupo(), estudiante.isBeca(),
-                        estudiante.isActividad() });
-                }
-                tablaAlmuerzos.setModel(modelo);
-                return;
-            }
-        }
+        
     }// GEN-LAST:event_crearCocineroActionPerformed
 
     private void volverConteoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverCocineroActionPerformed
@@ -568,7 +584,6 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton retirarAlmuerzo;
     private javax.swing.JButton retiroAlmuerzo;
     private javax.swing.JTable tablaAlmuerzos;
-    private com.k33ptoo.components.KButton visualizarFecha;
     private com.k33ptoo.components.KButton volverConteo;
     private com.k33ptoo.components.KButton volverRegistro;
     private com.k33ptoo.components.KButton volverRetiro;

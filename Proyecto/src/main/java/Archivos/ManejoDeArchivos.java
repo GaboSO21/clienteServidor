@@ -5,6 +5,7 @@ import java.util.*;
 
 import Almuerzos.Almuerzos;
 import Persona.Persona;
+import Planilla.Planilla;
 
 public class ManejoDeArchivos {
 
@@ -36,6 +37,39 @@ public class ManejoDeArchivos {
         }
     }
 
+    public void EscribirEnArchivo(Planilla planilla) {
+        try {
+            ArrayList<Planilla> planillas = LeerPlanillas();
+            planillas.add(planilla);
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("planillas.txt"));
+            for (Planilla pl : planillas) {
+                os.writeObject(pl);
+            }
+            os.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public ArrayList<Planilla> LeerPlanillas() {
+        ArrayList<Planilla> datos = new ArrayList<>();
+        try {
+            ObjectInputStream s = new ObjectInputStream(new FileInputStream("planillas.txt"));
+            Planilla planilla = null;
+            planilla = (Planilla) s.readObject();
+            while (planilla != null) {
+                datos.add(planilla);
+                planilla = (Planilla) s.readObject();
+            }
+            s.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        return datos;
+    }
+
     public ArrayList<Almuerzos> LeerAlmuerzos() {
         ArrayList<Almuerzos> datos = new ArrayList<>();
         try {
@@ -51,8 +85,6 @@ public class ManejoDeArchivos {
             ex.printStackTrace();
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
-        } finally {
-            System.out.println(datos);
         }
         return datos;
     }
@@ -91,6 +123,18 @@ public class ManejoDeArchivos {
     public void clearAlmuerzos() {
         try {
             FileWriter fw = new FileWriter("almuerzos.txt", false);
+            PrintWriter pw = new PrintWriter(fw, false);
+            pw.flush();
+            pw.close();
+            fw.close();
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        }
+    }
+
+    public void clearPlanillas() {
+        try {
+            FileWriter fw = new FileWriter("planillas.txt", false);
             PrintWriter pw = new PrintWriter(fw, false);
             pw.flush();
             pw.close();

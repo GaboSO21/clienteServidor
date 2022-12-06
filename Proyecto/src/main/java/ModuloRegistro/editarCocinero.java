@@ -14,11 +14,13 @@ import Persona.Persona;
 
 public class editarCocinero extends javax.swing.JFrame {
 
-    /**
-     * Creates new form editarCocinero
-     */
+    public ManejoDeArchivos archivo;
+    public ArrayList<Persona> lista;
+
     public editarCocinero() {
         initComponents();
+        this.archivo = new ManejoDeArchivos();
+        this.lista = archivo.LeerDatosDeArchivo();
         Cocinero cocinero = (Cocinero) usuarioEncontrado.getPersona();
         nombreCocinero.setText(cocinero.getNombre());
         apellidosCocinero.setText(cocinero.getApellido());
@@ -39,7 +41,8 @@ public class editarCocinero extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -66,13 +69,11 @@ public class editarCocinero extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 121, Short.MAX_VALUE));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -83,19 +84,23 @@ public class editarCocinero extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, -1, -1));
 
         estadoCocinero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activo", "Inactivo" }));
-        estadoCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        estadoCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(estadoCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 87, -1));
 
-        nombreCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        nombreCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(nombreCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 248, -1));
 
         jLabel7.setText("Nombre:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, -1));
 
-        apellidosCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        apellidosCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(apellidosCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 250, -1));
 
-        salarioCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        salarioCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(salarioCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 248, -1));
 
         jLabel13.setText("Salario:");
@@ -104,7 +109,8 @@ public class editarCocinero extends javax.swing.JFrame {
         jLabel12.setText("Cedula:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
 
-        cedulaCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        cedulaCocinero.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null,
+                null, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         jPanel2.add(cedulaCocinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -144,17 +150,18 @@ public class editarCocinero extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -164,43 +171,59 @@ public class editarCocinero extends javax.swing.JFrame {
     }// GEN-LAST:event_volverActionPerformed
 
     private void editarBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editarBtnActionPerformed
-        try {
-            ArrayList<Persona> lista = new ManejoDeArchivos().LeerDatosDeArchivo();
-            ManejoDeArchivos archivo = new ManejoDeArchivos();
-            String nombre = nombreCocinero.getText(), apellidos = apellidosCocinero.getText(),
-                    cedula = cedulaCocinero.getText();
-            double salario = Double.parseDouble(salarioCocinero.getText());
-            boolean estado = false;
-            switch (estadoCocinero.getSelectedIndex()) {
-                case 0:
-                    estado = true;
-                    break;
-                case 1:
-                    estado = false;
-                    break;
-            }
-            archivo.clearFile();
-            for (Persona persona : lista) {
-                if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
-                        && (persona instanceof Cocinero)) {
-                    Cocinero cocinero = (Cocinero) persona;
-                    cocinero.setActividad(estado);
-                    cocinero.setApellido(apellidos);
-                    cocinero.setCedula(cedula);
-                    cocinero.setNombre(nombre);
-                    cocinero.setSalario(salario);
-                    JOptionPane.showMessageDialog(rootPane, "Cocinero editado con exito.", "Registro", 1);
-                    for (Persona i : lista) {
-                        archivo.EscribirEnArchivo(i);
-                    }
-                    break;
+        if (revisarCocinero()) {
+            return;
+        } else {
+            try {
+                boolean estado = false;
+                switch (estadoCocinero.getSelectedIndex()) {
+                    case 0:
+                        estado = true;
+                        break;
+                    case 1:
+                        estado = false;
+                        break;
                 }
+                archivo.clearFile();
+                for (Persona persona : lista) {
+                    if (persona.getCedula().equals(usuarioEncontrado.getPersona().getCedula())
+                            && (persona instanceof Cocinero)) {
+                        Cocinero cocinero = (Cocinero) persona;
+                        cocinero.setActividad(estado);
+                        cocinero.setApellido(apellidosCocinero.getText());
+                        cocinero.setCedula(cedulaCocinero.getText());
+                        cocinero.setNombre(nombreCocinero.getText());
+                        cocinero.setSalario(Double.parseDouble(salarioCocinero.getText()));
+                        JOptionPane.showMessageDialog(rootPane, "Cocinero editado con exito.", "Registro", 1);
+                        for (Persona i : lista) {
+                            archivo.EscribirEnArchivo(i);
+                        }
+                        break;
+                    }
+                }
+                dispose();
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese numero para salario.", "Error", 0);
             }
-            dispose();
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(rootPane, e.getMessage(), "Error", 0);
         }
     }// GEN-LAST:event_editarBtnActionPerformed
+
+    public boolean revisarCocinero() {
+        lista = archivo.LeerDatosDeArchivo();
+        for (Persona persona : lista) {
+            if (cedulaCocinero.getText().equals(persona.getCedula())) {
+                JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con esa cedula.", "Error", 0);
+                return true;
+            } else if ((nombreCocinero.getText().equals("")) || (apellidosCocinero.getText().equals(""))
+                    || (cedulaCocinero.getText().equals("")) || (salarioCocinero.getText().equals(""))) {
+                JOptionPane.showMessageDialog(rootPane, "Campos vacios.", "Error", 0);
+                return false;
+            }
+        }
+
+        return false;
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosCocinero;
