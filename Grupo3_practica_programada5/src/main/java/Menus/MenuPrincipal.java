@@ -105,10 +105,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     protected void consultarBtnActionPerformed(ActionEvent evt) {
         new ConsultarMenu();
+        dispose();
     }
 
     protected void registroBtnActionPerformed(ActionEvent evt) {
         new RegistroMenu();
+        dispose();
     }
 
     protected void salirBtnActionPerformed(ActionEvent evt) {
@@ -116,6 +118,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     protected void consultarAgBtnActionPerformed(ActionEvent evt) {
+        new ConsultarAgMenu();
+        dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

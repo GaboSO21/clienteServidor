@@ -125,6 +125,7 @@ public class RegistroMenu extends javax.swing.JFrame {
                 archivo.EscribirEnArchivo(pez);
                 peces = archivo.LeerDatosDeArchivo();
                 JOptionPane.showMessageDialog(rootPane, "Especie registrada.", getTitle(), 1);
+                resetTxt();
                 return;
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(rootPane, "Ingresar numeros para precio y cantidad.", getTitle(), 0);
@@ -144,6 +145,7 @@ public class RegistroMenu extends javax.swing.JFrame {
         for (Especies especies : peces) {
             if (especies.getNombre().equals(nombreTxt.getText())) {
                 JOptionPane.showMessageDialog(rootPane, "Especie ya existente.", getTitle(), 0);
+                resetTxt();
                 return true;
             } else if ((nombreTxt.getText().equals("")) || (cantTxt.getText().equals(""))
                     || (precioTxt.getText().equals(""))) {
@@ -153,6 +155,12 @@ public class RegistroMenu extends javax.swing.JFrame {
         }
 
         return false;
+    }
+
+    public void resetTxt() {
+        nombreTxt.setText("");
+        cantTxt.setText("");
+        precioTxt.setText("");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

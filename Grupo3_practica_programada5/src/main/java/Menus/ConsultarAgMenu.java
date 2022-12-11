@@ -4,23 +4,24 @@
  */
 package Menus;
 
+import java.util.Collections;
 import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
 
 import Archivos.ArchivoEspecies;
-import Especie.Especies;
+import Especie.*;
 
 /**
  *
  * @author gabo-macos
  */
-public class ConsultarMenu extends javax.swing.JFrame {
+public class ConsultarAgMenu extends javax.swing.JFrame {
 
     public List<Especies> peces;
     public ArchivoEspecies archivo;
 
-    public ConsultarMenu() {
+    public ConsultarAgMenu() {
         initComponents();
         setVisible(true);
         setLocationRelativeTo(null);
@@ -31,10 +32,15 @@ public class ConsultarMenu extends javax.swing.JFrame {
         model.addColumn("Categoria");
         model.addColumn("Cantidad");
         model.addColumn("Precio");
-        tablaEspecies.setModel(model);
+        Collections.sort(peces, new EspecieComp());
         for (Especies especies : peces) {
-            especiesBox.addItem(especies.getNombre());
+            if (especies.getCantidad() == 0) {
+                model.addRow(new Object[] {
+                        especies.getNombre(), especies.getCantidad(), especies.getCantidad(), especies.getPrecio()
+                });
+            }
         }
+        tablaEspecies.setModel(model);
     }
 
     /**
@@ -46,13 +52,13 @@ public class ConsultarMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         salirBtn = new javax.swing.JButton();
-        especiesBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaEspecies = new javax.swing.JTable();
 
@@ -62,7 +68,7 @@ public class ConsultarMenu extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Menus/fish.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
 
         salirBtn.setText("Salir");
         salirBtn.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 153, 153)));
@@ -71,14 +77,7 @@ public class ConsultarMenu extends javax.swing.JFrame {
                 salirBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(salirBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 120, 30));
-
-        especiesBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                especiesBoxItemStateChanged(evt);
-            }
-        });
-        jPanel1.add(especiesBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 120, -1));
+        jPanel1.add(salirBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 120, 30));
 
         tablaEspecies.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,7 +92,7 @@ public class ConsultarMenu extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablaEspecies);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 370, 370));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 370, 370));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,14 +100,14 @@ public class ConsultarMenu extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 578, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -116,19 +115,7 @@ public class ConsultarMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void especiesBoxItemStateChanged(java.awt.event.ItemEvent evt) {// GEN-FIRST:event_especiesBoxItemStateChanged
-        DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Nombre");
-        model.addColumn("Categoria");
-        model.addColumn("Cantidad");
-        model.addColumn("Precio");
-        for (Especies especies : peces) {
-            if (especiesBox.getSelectedItem().equals(especies.getNombre())) {
-                model.addRow(new Object[] {
-                    especies.getNombre(), especies.getCantidad(), especies.getCantidad(), especies.getPrecio()
-                });
-            }
-        }
-        tablaEspecies.setModel(model);
+        
     }// GEN-LAST:event_especiesBoxItemStateChanged
 
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salirBtnActionPerformed
@@ -137,7 +124,6 @@ public class ConsultarMenu extends javax.swing.JFrame {
     }// GEN-LAST:event_salirBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> especiesBox;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
