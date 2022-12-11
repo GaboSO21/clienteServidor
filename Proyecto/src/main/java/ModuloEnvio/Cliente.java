@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 import Persona.Colaborador;
@@ -216,7 +217,7 @@ public class Cliente extends javax.swing.JFrame implements Runnable {
     }// GEN-LAST:event_verPlanillasActionPerformed
 
     private void volverBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_volverBtnActionPerformed
-
+        System.exit(0);
     }// GEN-LAST:event_volverBtnActionPerformed
 
     @Override
@@ -236,6 +237,11 @@ public class Cliente extends javax.swing.JFrame implements Runnable {
                     archivo.EscribirEnArchivo(planilla);
                     planillas = archivo.LeerPlanillas();
                     actualizarSet();
+                    JOptionPane.showMessageDialog(rootPane, "Nuevos datos recibidos!", getTitle(), 1);
+                    dispose();
+                    Cliente cliente = new Cliente();
+                    cliente.setVisible(true);
+                    cliente.setLocationRelativeTo(null);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
