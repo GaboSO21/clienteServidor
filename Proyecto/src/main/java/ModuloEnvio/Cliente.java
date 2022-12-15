@@ -28,6 +28,8 @@ public class Cliente extends javax.swing.JFrame implements Runnable {
 
     public Cliente() {
         initComponents();
+        setVisible(true);
+        setLocationRelativeTo(null);
         this.archivo = new ManejoDeArchivos();
         this.planillas = new ArrayList<>();
         this.planillas = archivo.LeerPlanillas();

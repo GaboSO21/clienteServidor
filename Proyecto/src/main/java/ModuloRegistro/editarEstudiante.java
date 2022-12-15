@@ -305,8 +305,11 @@ public class editarEstudiante extends javax.swing.JFrame {
 
         public boolean revisarEstudiante() {
                 this.lista = archivo.LeerDatosDeArchivo();
+                Estudiante estudiante = (Estudiante) usuarioEncontrado.getPersona();
                 for (Persona persona : lista) {
-                        if ((cedulaEstudiante.getText().equals(persona.getCedula()))) {
+                        if (cedulaEstudiante.getText().equals(estudiante.getCedula())) {
+                                return false;
+                        } else if ((cedulaEstudiante.getText().equals(persona.getCedula()))) {
                                 JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con dichos datos.",
                                                 "Error", 0);
                                 return true;
