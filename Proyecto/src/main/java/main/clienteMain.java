@@ -5,6 +5,9 @@ import ModuloEnvio.*;
 public class clienteMain {
     
     public static void main(String[] args) {
-        new Cliente();
+        Cliente cliente = new Cliente();
+        cliente.setVisible(true);
+        cliente.setLocationRelativeTo(null);
+        cliente.run();
     }
 }

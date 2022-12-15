@@ -720,7 +720,6 @@ public class ModuloRegistro extends javax.swing.JFrame {
                 }
                 Persona cocinero = new Cocinero(nombreCocinero.getText(), apellidosCocinero.getText(),
                         cedulaCocinero.getText(), estado, Double.parseDouble(salarioCocinero.getText()));
-                ManejoDeArchivos archivo = new ManejoDeArchivos();
                 archivo.EscribirEnArchivo(cocinero);
                 JOptionPane.showMessageDialog(rootPane, "Cocinero creado con exito.", "Registro", 1);
                 reiniciarCocinero();

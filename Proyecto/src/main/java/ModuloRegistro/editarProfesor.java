@@ -233,8 +233,11 @@ public class editarProfesor extends javax.swing.JFrame {
 
     public boolean revisarProfesor() {
         this.lista = archivo.LeerDatosDeArchivo();
+        Profesor profesor = (Profesor) usuarioEncontrado.getPersona();
         for (Persona persona : lista) {
-            if (cedulaProfesor.getText().equals(persona.getCedula())) {
+            if (cedulaProfesor.getText().equals(profesor.getCedula())) {
+                return false;
+            } else if (cedulaProfesor.getText().equals(persona.getCedula())) {
                 JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con esa cedula.", "Error", 0);
                 return true;
             } else if ((nombreProfesor.getText().equals("")) || (apellidosProfesor.getText().equals(""))

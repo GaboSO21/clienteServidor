@@ -210,8 +210,11 @@ public class editarCocinero extends javax.swing.JFrame {
 
     public boolean revisarCocinero() {
         lista = archivo.LeerDatosDeArchivo();
+        Cocinero cocinero = (Cocinero) usuarioEncontrado.getPersona();
         for (Persona persona : lista) {
-            if (cedulaCocinero.getText().equals(persona.getCedula())) {
+            if (cedulaCocinero.getText().equals(cocinero.getCedula())) {
+                return false;
+            } else if (cedulaCocinero.getText().equals(persona.getCedula())) {
                 JOptionPane.showMessageDialog(rootPane, "Ya existe un usuario con esa cedula.", "Error", 0);
                 return true;
             } else if ((nombreCocinero.getText().equals("")) || (apellidosCocinero.getText().equals(""))
