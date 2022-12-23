@@ -21,10 +21,7 @@ import Planilla.Planilla;
 import SQL.Conexion;
 import SQL.SQLColaborador;
 
-/**
- *
- * @author melis-macbook
- */
+
 public class RegistroColaboradores extends javax.swing.JFrame {
 
     public Connection conexion;

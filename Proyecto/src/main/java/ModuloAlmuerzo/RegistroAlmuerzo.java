@@ -15,10 +15,7 @@ import Persona.*;
 import Archivos.*;
 import Menu.MenuPrincipal;
 
-/**
- *
- * @author melis-macbook
- */
+
 public class RegistroAlmuerzo extends javax.swing.JFrame {
 
     /**
@@ -460,7 +457,8 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
     }// GEN-LAST:event_crearAlmuerzoActionPerformed
 
     public boolean revisarAlmuerzos() {
-        Almuerzos almuerzo = new Almuerzos(
+        try {
+            Almuerzos almuerzo = new Almuerzos(
                 diaAlmuerzo.getText() + "/" + mesAlmuerzo.getText() + "/" + annoAlmuerzo.getText());
         for (Almuerzos almuerzos2 : almuerzos) {
             if (almuerzos2.getFecha().toString().equals(almuerzo.getFecha().toString())) {
@@ -475,6 +473,10 @@ public class RegistroAlmuerzo extends javax.swing.JFrame {
         }
 
         return false;
+        } catch (NullPointerException e) {
+            JOptionPane.showMessageDialog(rootPane, "Campos vacios.", getTitle(), 0);
+            return true;
+        }
 
     }
 
